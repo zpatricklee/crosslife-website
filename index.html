@@ -47,8 +47,20 @@
           <br>
           <!-- CSS GRID CONTAINER -->
           <div class="grid">
-            <div class="col img-block">
-              <img src="//placehold.it/300" alt="" />
+            <div class="col">
+              <h2>Last Week's Sermon</h2>
+              <br>
+
+              <script src="api-v2.soundcloud.com/tracks/749832972"></script>
+              <script>
+              SC.initialize({
+                client_id: 'sCFubJLD5LtMoZI4xUu46btuIqerNC84',
+                // redirect_uri: 'https://google.com'
+              });
+
+              </script>
+
+              <iframe class="recent-sermon" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002051406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-749832972" title="Crosslife Christian Fellowship" target="_blank" style="color: #000; text-decoration: none;">Crosslife Christian Fellowship</a> · <a href="https://soundcloud.com/user-749832972/john-51-18-the-third-sign" title="John 5:1-18 - The Third Sign" target="_blank" style="color: #000; text-decoration: none;">John 5:1-18 - The Third Sign</a></div>
             </div>
             <div class="col">
               <h3>Col 2</h3>
@@ -142,17 +154,19 @@
       </h3>
     </section>
 
-    <!-- FIREBASE SDK -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!--
+    FIREBASE SDK
+    The core Firebase JS SDK is always required and must be listed first
     <script src="/__/firebase/8.2.10/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries
     <script src="/__/firebase/8.2.10/firebase-analytics.js"></script>
 
-    <!-- Initialize Firebase -->
+    Initialize Firebase
     <script src="/__/firebase/init.js"></script>
-    <!-- ./ FIREBASE SDK -->
+    ./ FIREBASE SDK
+    -->
 
     <!-- CONTACT FORM -->
     <section class="section section__contact" id="contact">
