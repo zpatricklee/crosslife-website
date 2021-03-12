@@ -1,0 +1,255 @@
+:root {
+  --color-primary: rgb(17, 24, 42);
+  --color-secondary: #ffffff;
+  --color-tertiary: rgb(220, 220, 220);
+  --color-primary-darker: #0c1229;
+  --color-secondary-darker: ;
+  --color-tertiary-darker: ;
+  --color-primary-lighter: #58a7c6;
+  --color-secondary-lighter: ;
+  --color-tertiary-lighter: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* GENERAL ELEMENTS */
+.section {
+  text-align: center;
+  border-top: 1px solid #ffffff;
+  padding: 15rem 3rem;
+  -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s;
+  transition: transform 1.5s, opacity 1.5s, -webkit-transform 1.5s;
+}
+
+.section p {
+  font-weight: 400;
+}
+
+.section--hidden {
+  opacity: 0;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+}
+
+/* NAVIGATION */
+.nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
+  z-index: 100;
+  background-color: var(--color-secondary);
+  color: black;
+  font-weight: 400;
+}
+
+.nav__logo {
+  height: 4.5rem;
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__item {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav__item {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .nav__item {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__item {
+    margin-left: 4rem;
+  }
+}
+
+.nav__link {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* GRID */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.grid .col {
+  background-color: var(--color-tertiary);
+  padding: 16px;
+}
+
+.grid .col.img-block {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding: 0;
+  background-color: none;
+}
+
+.grid .col:hover {
+  background-color: white;
+  font-weight: bolder;
+}
+
+/* GIVING */
+#giving {
+  color: white;
+  background: black;
+  background-image: url(../images/giving.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: bottom;
+}
+
+.tithely-give-btn {
+  background-color: #26af5f;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.tithely-give-btn:hover {
+  background-color: var(--color-primary);
+  color: #26af5f;
+}
+
+/* CONTACT */
+.section__contact {
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
+}
+
+.contact .input {
+  -webkit-box-shadow: 10px 10px 5px;
+          box-shadow: 10px 10px 5px;
+}
+
+.contact input {
+  padding: 0.5rem 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60%;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  padding: 0.5rem 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60%;
+  font-size: 1rem;
+}
+
+.contact-focus {
+  color: #000;
+  background-color: var(--color-secondary);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary-darker);
+  padding: 8rem 4rem;
+  color: var(--color-secondary);
+}
+
+.footer__nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

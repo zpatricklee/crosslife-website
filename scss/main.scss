@@ -1,0 +1,241 @@
+:root {
+  --color-primary: rgb(17, 24, 42);
+  --color-secondary: #ffffff;
+  --color-tertiary: rgb(220, 220, 220);
+  --color-primary-darker: #0c1229;
+  --color-secondary-darker: ;
+  --color-tertiary-darker: ;
+  --color-primary-lighter: #58a7c6;
+  --color-secondary-lighter: ;
+  --color-tertiary-lighter: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  // PICK FONT
+  font-family: "Poppins", sans-serif;
+  // background: linear-gradient(white, grey, black);
+  // background-repeat: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  background-color: var(--color-primary);
+  color: white;
+  // background: radial-gradient(#0c1229, rgb(220, 220, 220));
+  // background: content-box radial-gradient(#0c1229, rgb(220, 220, 220));
+  // background: linear-gradient(white, grey, black);
+}
+
+/* GENERAL ELEMENTS */
+.section {
+  text-align: center;
+  border-top: 1px solid #ffffff;
+  padding: 15rem 3rem;
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+.section p {
+  font-weight: 400;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/* NAVIGATION */
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
+  z-index: 100;
+  background-color: var(--color-secondary);
+  color: black;
+  font-weight: 400;
+  // transition: 0.4s all;
+}
+
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   // margin-top: 1rem;
+//   // width: 100%;
+//   transition: all 0.5s;
+// }
+
+.nav__logo {
+  height: 4.5rem;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  // background-color: burlywood;
+  justify-content: space-between;
+}
+
+.nav__item {
+  margin-left: 1rem;
+
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+  }
+
+  @media (min-width: 960px) {
+    margin-left: 3rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 4rem;
+  }
+}
+
+.nav__link {
+  // display: block;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  color: black;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .col {
+    background-color: var(--color-tertiary);
+    padding: 16px;
+    // align-self: start or end or center
+
+    &.img-block {
+      align-self: start;
+      padding: 0;
+      background-color: none;
+    }
+  }
+
+  .col:hover {
+    // font-weight: 700;
+    background-color: white;
+    // font-size: 17px;
+    font-weight: bolder;
+  }
+}
+
+/* GIVING */
+#giving {
+  color: white;
+  background: black;
+  background-image: url(../images/giving.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: bottom;
+}
+
+.tithely-give-btn {
+  background-color: #26af5f;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.tithely-give-btn:hover {
+  background-color: var(--color-primary);
+  // background-color: #000;
+  color: #26af5f;
+}
+
+/* CONTACT */
+.section__contact {
+  // color: white;
+  transition: background-color 1s, color 1s;
+}
+
+// .section__contact:hover {
+//   color: #000;
+//   background-color: var(--color-secondary);
+// }
+
+.contact {
+  // color: white;
+  // background-color: var(--color-primary);
+
+  .input {
+    box-shadow: 10px 10px 5px;
+  }
+
+  input {
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  textarea {
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    width: 60%;
+    font-size: 1rem;
+  }
+}
+
+.contact-focus {
+  color: #000;
+  background-color: var(--color-secondary);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary-darker);
+  padding: 8rem 4rem;
+  color: var(--color-secondary);
+}
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+}

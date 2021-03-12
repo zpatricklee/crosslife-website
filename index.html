@@ -1,0 +1,217 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <title>Crosslife</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="//placehold.it/300x100" alt="" class="nav__logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#about">ABOUT</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#location">LOCATION</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">ANNOUNCEMENTS</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#giving">GIVING</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section" id="about">
+      <div class="section__title">
+        <h2 class="section__description">ABOUT</h2>
+        <br />
+        <h4 class="section__header">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          voluptate cumque aspernatur officia minima expedita, porro itaque
+          nesciunt tempora minus velit odit dolores eveniet provident enim ab
+          magni possimus. Minima.
+          <br>
+          <!-- CSS GRID CONTAINER -->
+          <div class="grid">
+            <div class="col img-block">
+              <img src="//placehold.it/300" alt="" />
+            </div>
+            <div class="col">
+              <h3>Col 2</h3>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur quaerat quibusdam maiores exercitationem. Fuga
+                voluptas nostrum voluptatum nulla repellat? Doloremque!
+              </p>
+            </div>
+            <div class="col">
+              <img src="//placehold.it/300x150" alt="" />
+              <br />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+                reiciendis distinctio quas libero illum, sed aperiam ipsam
+                quisquam praesentium molestiae ipsum nihil nisi pariatur
+                aliquid, suscipit hic sunt tempore non qui. Atque libero quos,
+                iste sint velit similique autem illum?
+              </p>
+            </div>
+            <div class="col">
+              <h3>Col 4</h3>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Assumenda soluta quis iure accusantium corporis sed quisquam
+                veritatis, molestias magnam cum!
+              </p>
+            </div>
+            <div class="col">
+              <h3>Col 5</h3>
+              <img src="//placehold.it/300x150" alt="" />
+            </div>
+            <div class="col">
+              <h3>Col 6</h3>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia blanditiis iure aspernatur placeat nesciunt animi
+                deserunt provident expedita. Deleniti, fugiat.
+              </p>
+            </div>
+            <div class="col">
+              <img src="//placehold.it/300x200" alt="" />
+              <h3>Col 7</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+                placeat aspernatur voluptatum. Iusto repudiandae quam sunt
+                dolorum ullam. Quibusdam possimus esse dicta adipisci incidunt
+                fugit omnis maiores suscipit illum consequuntur?
+              </p>
+            </div>
+            <div class="col">
+              <h3>Col 8</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                vel.
+              </p>
+            </div>
+          </div>
+          <!-- ./ CSS GRID CONTAINER -->
+        </h4>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <h2 class="section__description">LOCATION</h2>
+      <br>
+      <h4 class="section__description">1340 W Gardena Blvd. Gardena, CA 90247
+        <br>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.1674815076735!2d-118.3003962416647!3d33.88102612192569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ca82a02543b9%3A0xe09b675c46012d1d!2s1340%20W%20Gardena%20Blvd%2C%20Gardena%2C%20CA%2090247!5e0!3m2!1sen!2sus!4v1615316196901!5m2!1sen!2sus" width="80%" height="60%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </h4>
+    </section>
+
+    <section class="section" id="giving">
+      <h2 class="section__title">GIVING</h2>
+      <br />
+      <h4 class="section__description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus sint
+        nulla ad blanditiis recusandae iusto vitae reprehenderit dolorem
+        perspiciatis? Molestias.
+        <br><br><br>
+        <button class="tithely-give-btn" data-church-id="1294663">Give Online</button>
+        <script src="https://tithe.ly/widget/v2/give.js?3"></script>
+        <script>
+          var config = {};
+          var tw = create_tithely_widget(config);
+        </script>
+      </h3>
+    </section>
+
+    <!-- FIREBASE SDK -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.10/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.2.10/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- ./ FIREBASE SDK -->
+
+    <!-- CONTACT FORM -->
+    <section class="section section__contact" id="contact">
+      <h2>CONTACT US</h2>
+      <form
+        class="contact"
+        action="https://formspree.io/f/xaylrnvy"
+        method="POST"
+      >
+        <br />
+        <input
+          class="input"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+        <br />
+        <input
+          class="input"
+          type="email"
+          name="_replyto"
+          placeholder="Email"
+          style="margin-top: 1rem"
+          required
+        />
+        <br /><br />
+        <textarea
+          class="input"
+          name="message"
+          id="email-message"
+          rows="10"
+          placeholder="Enter your message here..."
+        ></textarea>
+        <br /><br />
+        <input type="submit" value="SEND" />
+        <br /><br /><br /><br />
+      </form>
+    </section>
+    <!-- ./ CONTACT FORM -->
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#about">ABOUT</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#location">LOCATION</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#announcements">ANNOUNCEMENTS</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#giving">GIVING</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
