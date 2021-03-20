@@ -1,5 +1,6 @@
 "use strict";
 
+console.log("script");
 // Selectors
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");

@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="./scss/main.css" />
     <title>Crosslife</title>
-    <script defer src="script.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -39,90 +39,42 @@
       <div class="section__title">
         <h2 class="section__description">ABOUT</h2>
         <br />
-        <h4 class="section__header">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          voluptate cumque aspernatur officia minima expedita, porro itaque
-          nesciunt tempora minus velit odit dolores eveniet provident enim ab
-          magni possimus. Minima.
+        <h3 class="section__header">
+          We exist as a church to make Jesus Christ known. <br>
+          Our lives have been transformed through Him—His sacrifice and resurrection. <br>Therefore, our mission
+          is to renew lives for Christ by experiencing discipleship together in community.
           <br>
-          <!-- CSS GRID CONTAINER -->
-          <div class="grid">
-            <div class="col">
-              <h2>Last Week's Sermon</h2>
-              <br>
-
-              <script src="api-v2.soundcloud.com/tracks/749832972"></script>
-              <script>
-              SC.initialize({
-                client_id: 'sCFubJLD5LtMoZI4xUu46btuIqerNC84',
-                // redirect_uri: 'https://google.com'
-              });
-
-              </script>
-
-              <iframe class="recent-sermon" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002051406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-749832972" title="Crosslife Christian Fellowship" target="_blank" style="color: #000; text-decoration: none;">Crosslife Christian Fellowship</a> · <a href="https://soundcloud.com/user-749832972/john-51-18-the-third-sign" title="John 5:1-18 - The Third Sign" target="_blank" style="color: #000; text-decoration: none;">John 5:1-18 - The Third Sign</a></div>
-            </div>
-            <div class="col">
-              <h3>Col 2</h3>
-              <br />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur quaerat quibusdam maiores exercitationem. Fuga
-                voluptas nostrum voluptatum nulla repellat? Doloremque!
-              </p>
-            </div>
-            <div class="col">
-              <img src="//placehold.it/300x150" alt="" />
-              <br />
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
-                reiciendis distinctio quas libero illum, sed aperiam ipsam
-                quisquam praesentium molestiae ipsum nihil nisi pariatur
-                aliquid, suscipit hic sunt tempore non qui. Atque libero quos,
-                iste sint velit similique autem illum?
-              </p>
-            </div>
-            <div class="col">
-              <h3>Col 4</h3>
-              <br />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Assumenda soluta quis iure accusantium corporis sed quisquam
-                veritatis, molestias magnam cum!
-              </p>
-            </div>
-            <div class="col">
-              <h3>Col 5</h3>
-              <img src="//placehold.it/300x150" alt="" />
-            </div>
-            <div class="col">
-              <h3>Col 6</h3>
-              <br />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia blanditiis iure aspernatur placeat nesciunt animi
-                deserunt provident expedita. Deleniti, fugiat.
-              </p>
-            </div>
-            <div class="col">
-              <img src="//placehold.it/300x200" alt="" />
-              <h3>Col 7</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-                placeat aspernatur voluptatum. Iusto repudiandae quam sunt
-                dolorum ullam. Quibusdam possimus esse dicta adipisci incidunt
-                fugit omnis maiores suscipit illum consequuntur?
-              </p>
-            </div>
-            <div class="col">
-              <h3>Col 8</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                vel.
-              </p>
-            </div>
+          
+          <!-- CAROUSEL -->
+          <div class="about-carousel">
+            <button class="carousel__button carousel__button--left">
+              <img src="images/left-btn.svg" alt="">
+            </button>
+              <div class="carousel__track-container">
+                <ul class="carousel__track">
+                  <li class="carousel__slide">
+                    <img class="carousel__image" src="//placehold.it/1200x800" alt="" class="carousel__image">
+                  </li>
+                  <li class="carousel__slide">
+                    <img class="carousel__image" src="//placehold.it/1200x800" alt="" class="carousel__image">
+                  </li>
+                  <li class="carousel__slide">
+                    <img class="carousel__image" src="//placehold.it/1200x800" alt="" class="carousel__image">
+                  </li>
+                </ul>
+              </div>
+            <button class="carousel__button carousel__button--right">
+              <img src="images/right-btn.svg" alt="">
+            </button>
           </div>
-          <!-- ./ CSS GRID CONTAINER -->
+
+          <div class="carousel__nav">
+            <button class="carousel__indicator current-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+          </div>
+          
+          <script src="js/carousel.js"></script>
         </h4>
       </div>
     </section>
