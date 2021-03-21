@@ -1,6 +1,5 @@
 "use strict";
 
-console.log("script");
 // Selectors
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
@@ -46,5 +45,5 @@ window.addEventListener("scroll", function (e) {
     contact.classList.add("contact-focus");
   } else contact.classList.remove("contact-focus");
 });
-nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseover", handleHover.bind(0.3));
 nav.addEventListener("mouseout", handleHover.bind(1));
