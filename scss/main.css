@@ -41,6 +41,10 @@ body {
   padding-top: 7rem;
 }
 
+.section#location {
+  padding-top: 7rem;
+}
+
 .section p {
   font-weight: 400;
 }
@@ -209,6 +213,8 @@ body {
 
 .carousel__indicator.current-slide {
   background: rgba(255, 255, 255, 0.9);
+  -webkit-transition: background 0.8s ease-in;
+  transition: background 0.8s ease-in;
 }
 
 /* GRID */

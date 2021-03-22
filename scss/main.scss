@@ -43,6 +43,10 @@ body {
   padding-top: 7rem;
 }
 
+.section#location {
+  padding-top: 7rem;
+}
+
 .section p {
   font-weight: 400;
 }
@@ -98,7 +102,6 @@ body {
 }
 
 .nav__link {
-  // display: block;
   transition-duration: 0.5s;
   text-decoration: none;
   color: inherit;
@@ -191,6 +194,7 @@ body {
 
 .carousel__indicator.current-slide {
   background: rgba(255, 255, 255, 0.9);
+  transition: background 0.8s ease-in;
 }
 
 /* GRID */
@@ -274,15 +278,7 @@ body {
   transition: background-color 1s, color 1s;
 }
 
-// .section__contact:hover {
-//   color: #000;
-//   background-color: var(--color-secondary);
-// }
-
 .contact {
-  // color: white;
-  // background-color: var(--color-primary);
-
   .input {
     box-shadow: 10px 10px 5px;
   }
