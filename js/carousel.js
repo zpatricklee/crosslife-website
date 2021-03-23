@@ -82,7 +82,7 @@ dotsNav.addEventListener("click", (e) => {
 
 // automate carousel to cycle through slides
 const automateCarousel = () => {
-  return window.setInterval(goToNextSlide, 7000);
+  return window.setInterval(goToNextSlide, 30000);
 };
 
 const goToNextSlide = () => {

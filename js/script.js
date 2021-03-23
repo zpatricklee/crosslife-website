@@ -47,3 +47,29 @@ window.addEventListener("scroll", function (e) {
 });
 nav.addEventListener("mouseover", handleHover.bind(0.3));
 nav.addEventListener("mouseout", handleHover.bind(1));
+
+//////////////////////////////////////////////////////////////////////////
+// COUNTDOWN FUNCTIONALITY
+let countdownDate = new Date("Apr 4, 2021 12:00:00").getTime();
+
+const countdown = setInterval(() => {
+  const now = new Date().getTime();
+  const timeLeft = countdownDate - now;
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  if (timeLeft >= 0) {
+    document.getElementById("countdown-timer").innerHTML = `${days} : ${(
+      "0" + hours
+    ).slice(-2)} :  ${("0" + minutes).slice(-2)} : ${("0" + seconds).slice(
+      -2
+    )}`;
+  } else {
+    document.getElementById("countdown-timer").innerHTML = "JESUS IS RISEN!";
+  }
+}, 1000);
