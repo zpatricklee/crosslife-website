@@ -19,6 +19,9 @@
   font-family: "Poppins", sans-serif;
   // background: linear-gradient(white, grey, black);
   // background-repeat: none;
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 body {
@@ -39,9 +42,9 @@ body {
   transition: transform 1.5s, opacity 1.5s;
 }
 
-.section#about {
-  padding-top: 7rem;
-}
+// .section#about {
+//   padding-top: 8rem;
+// }
 
 .section#location {
   padding-top: 7rem;
@@ -208,8 +211,8 @@ body {
 }
 
 .carousel-video h1 {
-  text-shadow: -1px -1px 0 rgb(255, 0, 0), 1px -1px 0 rgb(255, 0, 0),
-    -1px 1px 0 rgb(255, 0, 0), 1px 1px 0 rgb(255, 0, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #easter-sunday {
@@ -227,8 +230,8 @@ body {
 
 #easter-message p {
   font-size: 4rem;
-  text-shadow: -1px -1px 0 rgb(255, 0, 0), 1px -1px 0 rgb(255, 0, 0),
-    -1px 1px 0 rgb(255, 0, 0), 1px 1px 0 rgb(255, 0, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 /* GRID */
@@ -270,24 +273,63 @@ body {
   }
 
   .col:hover {
-    // font-weight: 700;
     background-color: white;
-    // font-size: 17px;
     font-weight: bolder;
     transform: scale(1.05, 1.05);
     z-index: 10;
   }
 }
 
+/* SERMONS */
+.sermons__spotify-link {
+  text-decoration: none;
+  color: #1db954;
+}
+
+.sermons__spotify-link:hover {
+  text-decoration: underline;
+}
+
+.sermons__spotify-code:hover {
+  border: 1px solid white;
+}
+
 /* GIVING */
-#giving {
+.section#giving {
   color: white;
-  background: black;
+  // background: black;
   background-image: url(../images/giving.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 40%;
   background-position-y: bottom;
+  // padding: 15rem 0rem;
+}
+.giving-container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  h3 {
+    text-decoration: underline;
+  }
+}
+
+.giving__section-1 {
+  // background: red;
+  flex: 1 1 300px;
+}
+
+.giving__section-2 {
+  // background: blue;
+  flex: 1 1 300px;
+}
+
+.giving__tithely-fees {
+  font-style: italic;
 }
 
 .tithely-give-btn {
@@ -340,7 +382,7 @@ body {
 /* FOOTER */
 .footer {
   background-color: var(--color-primary-darker);
-  padding: 8rem 4rem;
+  padding: 6rem 4rem;
   color: var(--color-secondary);
 }
 

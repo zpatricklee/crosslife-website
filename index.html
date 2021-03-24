@@ -20,13 +20,16 @@
             <a class="nav__link" href="#about">ABOUT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#location">LOCATION</a>
+            <a class="nav__link" href="#announcements">ANNOUNCEMENTS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">ANNOUNCEMENTS</a>
+            <a class="nav__link" href="#sermons">SERMONS</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#giving">GIVING</a>
+          </li>          
+          <li class="nav__item">
+            <a class="nav__link" href="#location">LOCATION</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#contact">CONTACT</a>
@@ -36,16 +39,26 @@
     </header>
 
     <section class="section" id="about">
-      <div class="section__title">
-        <h2 class="section__description">ABOUT</h2>
-        <br />
-        <h3 class="section__header">
-          We exist as a church to make Jesus Christ known. <br>
-          Our lives have been transformed through Him—His sacrifice and resurrection. <br>Therefore, our mission
-          is to renew lives for Christ by experiencing discipleship together in community.
+      <h1 class="section__title">ABOUT</h1>
+        <br><br>
+        <h2 class="section__description">
+          <p> We exist as a church to make Jesus Christ known. <br><br>
+          Our lives have been transformed through Him — <br> 
+          His sacrifice and resurrection. <br><br>
+          Therefore, our mission is to renew lives for Christ by experiencing discipleship together in community.
+          </p>
           <br>
           <br>
-          
+          — Welcome to Crosslife Christian Fellowship —
+          <br><br>
+          <img src="//placehold.it/600x600" alt="">
+        </h2>
+    </section>
+      
+    <section class="section" id="announcements">
+      <h1 class="section__title">ANNOUNCEMENTS</h1>
+      <br><br>
+      <h2 class="section__description">
           <!-- CAROUSEL -->
           <div class="about-carousel">
             <button class="carousel__button carousel__button--left">
@@ -57,7 +70,7 @@
                     <div class="carousel__video-container">
                       <video id="easter-sunday" preload="" autoplay="true" muted="" playsinline="" loop="true">
                         <source src="videos/easter-sunday.mp4" type="video/mp4">
-                        <!-- <source src="videos/easter-sunday.webm" type="video/webm"> -->
+                        <source src="videos/easter-sunday.webm" type="video/webm">
                       </video>
                         <div class="carousel-video" id="easter-message">
                           <br>
@@ -66,9 +79,6 @@
                           </p>
                         </div>
                     </div>
-                    
-                    <!-- <img class="carousel__image" src="images/slide1.jpg" alt="" class="carousel__image">
-                    TESTING! -->
                   </li>
                   <li class="carousel__slide" id="slide-1">
                     <img class="carousel__image" src="images/slide2.jpg" alt="" class="carousel__image">
@@ -90,12 +100,53 @@
           </div>
           
           <script src="js/carousel.js"></script>
-        </h4>
+        </h2>
       </div>
     </section>
 
+    <section class="section" id="sermons">
+      <h1 class="section__title">RECENT SERMONS</h1>
+      <br>
+      <h2 class="section__description">
+        LAST WEEK'S SERMON <br>
+        <iframe src="https://open.spotify.com/embed-podcast/show/4kThl6swDryOK9aY1jOCov" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <br><br><br>
+        <p>
+          Previous sermons can be found and listened to on <a class="sermons__spotify-link" href="spotify:show:4kThl6swDryOK9aY1jOCov">Spotify</a><br>
+          To find/follow us, click or use the Spotify code below<br><br>
+          <a href="spotify:show:4kThl6swDryOK9aY1jOCov"><img class="sermons__spotify-code" src="images/spotify-code.png" alt=""></a>
+        </p>          
+      </h2>
+    </section>
+
+    <section class="section" id="giving">
+      <h1 class="section__title">GIVING</h1>
+      <br>
+      <h2 class="section__description">
+        <div class="giving-container">
+          <div class="giving__section-2">
+            We offer online giving through Tithe.ly<br>
+            <p>Please note the following fees when giving via Tithe.ly:<br><br>
+            <span class="giving__tithely-fees">
+              2.9% + 0.30 per transaction <br>
+              ACH/Bank: 1% + 30¢ <br>
+              AMEX: 3.5% + 30¢ <br>
+            </span>
+            </p> 
+            <br>
+            <button class="tithely-give-btn" data-church-id="1294663">Give Online</button>
+            <script src="https://tithe.ly/widget/v2/give.js?3"></script>
+            <script>
+              var config = {};
+              var tw = create_tithely_widget(config);
+            </script>
+          </div>
+        </div>
+      </h2>
+    </section>
+
     <section class="section" id="location">
-      <h2 class="section__description">LOCATION</h2>
+      <h1 class="section__description">LOCATION</h1>
       <br>
       <h4 class="section__description">1340 W Gardena Blvd. Gardena, CA 90247
         <br>
@@ -104,40 +155,9 @@
       </h4>
     </section>
 
-    <section class="section" id="giving">
-      <h2 class="section__title">GIVING</h2>
-      <br />
-      <h4 class="section__description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus sint
-        nulla ad blanditiis recusandae iusto vitae reprehenderit dolorem
-        perspiciatis? Molestias.
-        <br><br><br>
-        <button class="tithely-give-btn" data-church-id="1294663">Give Online</button>
-        <script src="https://tithe.ly/widget/v2/give.js?3"></script>
-        <script>
-          var config = {};
-          var tw = create_tithely_widget(config);
-        </script>
-      </h3>
-    </section>
-
-    <!--
-    FIREBASE SDK
-    The core Firebase JS SDK is always required and must be listed first
-    <script src="/__/firebase/8.2.10/firebase-app.js"></script>
-
-    TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries
-    <script src="/__/firebase/8.2.10/firebase-analytics.js"></script>
-
-    Initialize Firebase
-    <script src="/__/firebase/init.js"></script>
-    ./ FIREBASE SDK
-    -->
-
     <!-- CONTACT FORM -->
     <section class="section section__contact" id="contact">
-      <h2>CONTACT US</h2>
+      <h1>CONTACT US</h1>
       <form
         class="contact"
         action="https://formspree.io/f/xaylrnvy"
@@ -178,19 +198,7 @@
     <footer class="footer">
       <ul class="footer__nav">
         <li class="footer__item">
-          <a class="footer__link" href="#about">ABOUT</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#location">LOCATION</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#announcements">ANNOUNCEMENTS</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#giving">GIVING</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#contact">CONTACT</a>
+          <a class="footer__location" href="#about">ABOUT</a>
         </li>
       </ul>
     </footer>
