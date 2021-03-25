@@ -66,7 +66,7 @@
             </button>
               <div class="carousel__track-container">
                 <ul class="carousel__track">
-                  <li class="carousel__slide current-slide" id="slide-0">
+                  <li class="carousel__slide current-slide" id="announcements__easter-video" data-slide="0">
                     <div class="carousel__video-container">
                       <video id="easter-sunday" preload="" autoplay="true" muted="" playsinline="" loop="true">
                         <source src="videos/easter-sunday.mp4" type="video/mp4">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                   </li>
-                  <li class="carousel__slide" id="slide-1">
+                  <li class="carousel__slide" id="announcements__bulletin" data-slide="1">
                     <!-- <img class="carousel__image" src="images/slide2.jpg" alt="" class="carousel__image"> -->
                     <ul class="announcements">
                       <span class="announcements-header">LENT 2021</span>
@@ -110,8 +110,8 @@
                       <li class="announcements-list">Every Sunday morning @ 10AM, members of our church meet together to pray for our church. Everyone is invited to join in!</li>
                     </ul>
                   </li>
-                  <li class="carousel__slide" id="slide-2">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=crosslifechristianfellowship%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                  <li class="carousel__slide" id="carousel__calendar" data-slide="2">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=Y3Jvc3NsaWZlY2hyaXN0aWFuZmVsbG93c2hpcEBnbWFpbC5jb20&amp;color=%23039BE5&amp;showTitle=1&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
                   </li>
                 </ul>
               </div>
@@ -121,9 +121,9 @@
           </div>
 
           <div class="carousel__nav">
-            <button class="carousel__indicator current-slide" id="dot-0"></button>
-            <button class="carousel__indicator" id="dot-1"></button>
-            <button class="carousel__indicator" id="dot-2"></button>
+            <button class="carousel__indicator current-dot" data-dot="0"></button>
+            <button class="carousel__indicator" data-dot="1"></button>
+            <button class="carousel__indicator" data-dot="2"></button>
           </div>
           
           <script src="js/carousel.js"></script>

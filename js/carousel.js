@@ -12,8 +12,13 @@ const setSlidePosition = (slide, index) => {
 };
 slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetID) => {
-  const targetSlide = track.querySelector(`#slide-${targetID}`);
+const moveToSlide = (track, current, target) => {
+  const currentSlide = track.querySelector(
+    `.carousel__slide[data-slide="${current}"]`
+  );
+  const targetSlide = track.querySelector(
+    `.carousel__slide[data-slide="${target}"]`
+  );
 
   track.style.transform = `translateX(-${targetSlide.style.left})`;
   currentSlide.classList.remove("current-slide");
@@ -22,8 +27,12 @@ const moveToSlide = (track, currentSlide, targetID) => {
 
 const updateDotsNav = (dotsNav, currentDot, targetDot) => {
   // update current-slide dot
-  dotsNav.querySelector(`#dot-${currentDot}`).classList.remove("current-slide");
-  dotsNav.querySelector(`#dot-${targetDot}`).classList.add("current-slide");
+  dotsNav
+    .querySelector(`.carousel__indicator[data-dot="${currentDot}"]`)
+    .classList.remove("current-dot");
+  dotsNav
+    .querySelector(`.carousel__indicator[data-dot="${targetDot}"]`)
+    .classList.add("current-dot");
 };
 
 // reset interval for automatic carousel
@@ -36,30 +45,28 @@ const resetTimer = () => {
 prevButton.addEventListener("click", (e) => {
   resetTimer();
 
-  const currentSlide = track.querySelector(".current-slide");
-  const currentID = parseInt(currentSlide.id.substring(6));
-  let prevID;
+  const currentSlide = track.querySelector(".current-slide").dataset.slide;
+  let prevSlide;
 
-  if (currentID === 0) {
-    prevID = track.childElementCount - 1;
-  } else prevID = currentID - 1;
+  if (currentSlide === 0) {
+    prevSlide = track.childElementCount - 1;
+  } else prevSlide = currentSlide - 1;
 
   // update dot
-  updateDotsNav(dotsNav, currentID, prevID);
-  moveToSlide(track, currentSlide, prevID);
+  updateDotsNav(dotsNav, currentSlide, prevSlide);
+  moveToSlide(track, currentSlide, prevSlide);
 });
 
 // when I click right, move slides to the right
 nextButton.addEventListener("click", (e) => {
   resetTimer();
 
-  const currentSlide = track.querySelector(".current-slide");
-  const currentID = parseInt(currentSlide.id.substring(6));
-  const nextID = (currentID + 1) % track.childElementCount;
+  const currentSlide = track.querySelector(".current-slide").dataset.slide;
+  const nextSlide = (currentSlide + 1) % track.childElementCount;
 
   // update dot
-  updateDotsNav(dotsNav, currentID, nextID);
-  moveToSlide(track, currentSlide, nextID);
+  updateDotsNav(dotsNav, currentSlide, nextSlide);
+  moveToSlide(track, currentSlide, nextSlide);
 });
 
 // when I click the nav indicators, move to that slide
@@ -71,13 +78,14 @@ dotsNav.addEventListener("click", (e) => {
 
   resetTimer();
 
-  const currentSlide = track.querySelector(".current-slide");
-  const currentID = parseInt(currentSlide.id.substring(6));
-  const targetID = parseInt(clicked.id.substring(4));
+  console.log(clicked.dataset.slide);
+
+  const currentSlide = track.querySelector(".current-slide").dataset.slide;
+  const targetSlide = clicked.dataset.dot;
   // console.log(clicked, currentSlide);
 
-  moveToSlide(track, currentSlide, targetID);
-  updateDotsNav(dotsNav, currentID, targetID);
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDotsNav(dotsNav, currentSlide, targetSlide);
 });
 
 // automate carousel to cycle through slides
@@ -86,12 +94,11 @@ const automateCarousel = () => {
 };
 
 const goToNextSlide = () => {
-  const currentSlide = track.querySelector(".current-slide");
-  const currentID = parseInt(currentSlide.id.substring(6));
-  const nextID = (currentID + 1) % track.childElementCount;
+  const currentSlide = track.querySelector(".current-slide").dataset.slide;
+  const nextSlide = (currentSlide + 1) % track.childElementCount;
 
   // update dot
-  updateDotsNav(dotsNav, currentID, nextID);
-  moveToSlide(track, currentSlide, nextID);
+  updateDotsNav(dotsNav, currentSlide, nextSlide);
+  moveToSlide(track, currentSlide, nextSlide);
 };
 let timer = automateCarousel();
