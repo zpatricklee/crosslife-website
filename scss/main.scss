@@ -115,8 +115,10 @@ body {
 }
 
 /* ABOUT */
+
+/* ANNOUNCEMENTS */
 // CAROUSEL
-.about-carousel {
+.carousel {
   position: relative;
   height: 60%;
   width: 80%;
@@ -145,6 +147,7 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
+  padding: 1rem 1rem;
 }
 
 .carousel__image {
@@ -203,8 +206,9 @@ body {
 // CAROUSEL VIDEO (EASTER SUNDAY)
 .carousel__video-container {
   position: absolute;
-  top: 0;
+  // top: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -232,6 +236,17 @@ body {
   font-size: 4rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.announcements {
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+  // border: 1px solid white;
+}
+
+.announcements-header {
+  text-decoration: underline;
 }
 
 /* GRID */

@@ -50,7 +50,7 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////////////////////////////////////////////////
 // COUNTDOWN FUNCTIONALITY
-let countdownDate = new Date("Apr 4, 2021 12:00:00").getTime();
+let countdownDate = new Date("Apr 4, 2021 11:00:00").getTime();
 
 const countdown = setInterval(() => {
   const now = new Date().getTime();
