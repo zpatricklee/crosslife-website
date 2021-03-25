@@ -33,6 +33,7 @@ body {
 /* GENERAL ELEMENTS */
 .section {
   text-align: center;
+  width: 100%;
   border-top: 1px solid #ffffff;
   padding: 15rem 3rem;
   -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
@@ -326,7 +327,16 @@ body {
   color: #1db954;
 }
 
+.sermons__anchor-link {
+  text-decoration: none;
+  color: #500069;
+}
+
 .sermons__spotify-link:hover {
+  text-decoration: underline;
+}
+
+.sermons__anchor-link:hover {
   text-decoration: underline;
 }
 
