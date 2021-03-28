@@ -48,8 +48,8 @@ prevButton.addEventListener("click", (e) => {
   const currentSlide = track.querySelector(".current-slide").dataset.slide;
   let prevSlide;
 
-  if (currentSlide === 0) {
-    prevSlide = track.childElementCount - 1;
+  if (currentSlide === "0") {
+    prevSlide = `${track.childElementCount - 1}`;
   } else prevSlide = currentSlide - 1;
 
   // update dot
@@ -90,7 +90,7 @@ dotsNav.addEventListener("click", (e) => {
 
 // automate carousel to cycle through slides
 const automateCarousel = () => {
-  return window.setInterval(goToNextSlide, 30000);
+  return window.setInterval(goToNextSlide, 40000);
 };
 
 const goToNextSlide = () => {

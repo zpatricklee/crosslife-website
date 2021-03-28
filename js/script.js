@@ -4,7 +4,7 @@
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const contact = document.querySelector("#contact");
-const contactHeight = contact.offsetTop;
+
 const allSections = document.querySelectorAll(".section");
 
 const handleHover = function (e) {
@@ -27,6 +27,7 @@ const revealSection = function (entries) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove("section--hidden");
+
   sectionObserver.unobserve(entry.target);
 };
 
@@ -41,7 +42,9 @@ allSections.forEach((section) => {
 
 // Event listeners
 window.addEventListener("scroll", function (e) {
-  if (window.scrollY >= contactHeight - 0.15 * contact.offsetTop) {
+  const contactHeight = contact.offsetTop;
+
+  if (window.scrollY >= 0.85 * contactHeight) {
     contact.classList.add("contact-focus");
   } else contact.classList.remove("contact-focus");
 });
@@ -64,12 +67,12 @@ const countdown = setInterval(() => {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   if (timeLeft >= 0) {
-    document.getElementById("countdown-timer").innerHTML = `${days} : ${(
+    document.getElementById("easter-countdown").innerHTML = `${days}d : ${(
       "0" + hours
-    ).slice(-2)} :  ${("0" + minutes).slice(-2)} : ${("0" + seconds).slice(
+    ).slice(-2)}h :  ${("0" + minutes).slice(-2)}m : ${("0" + seconds).slice(
       -2
-    )}`;
+    )}s`;
   } else {
-    document.getElementById("countdown-timer").innerHTML = "JESUS IS RISEN!";
+    document.getElementById("easter-countdown").innerHTML = "0 : 0 : 0 : 0";
   }
 }, 1000);

@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./scss/main.css" />
     <title>Crosslife</title>
@@ -14,25 +15,31 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <img src="//placehold.it/300x100" alt="" class="nav__logo" />
+        <a href="./index.html"
+          ><img src="//placehold.it/300x100" alt="" class="nav__logo"
+        /></a>
+        <div id="announcement-banner">
+          <p id="announcement-banner-text">RESURRECTION SUNDAY COUNTDOWN</p>
+          <p id="easter-countdown"></p>
+        </div>
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#about">ABOUT</a>
+            <a class="nav__link" href="./index.html#about">ABOUT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#announcements">ANNOUNCEMENTS</a>
+            <a class="nav__link" href="./announcements.html">ANNOUNCEMENTS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#sermons">SERMONS</a>
+            <a class="nav__link" href="./index.html#sermons">SERMONS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#giving">GIVING</a>
-          </li>          
-          <li class="nav__item">
-            <a class="nav__link" href="#location">LOCATION</a>
+            <a class="nav__link" href="./index.html#giving">GIVING</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#contact">CONTACT</a>
+            <a class="nav__link" href="./index.html#location">LOCATION</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -40,26 +47,28 @@
 
     <section class="section" id="about">
       <h1 class="section__title">ABOUT</h1>
-        <br><br>
-        <h2 class="section__description">
-          <p> We exist as a church to make Jesus Christ known. <br><br>
-          Our lives have been transformed through Him — <br> 
-          His sacrifice and resurrection. <br><br>
-          Therefore, our mission is to renew lives for Christ by experiencing discipleship together in community.
-          </p>
-          <br>
-          <br>
-          — Welcome to Crosslife Christian Fellowship —
-          <br><br>
-          <img src="//placehold.it/600x600" alt="">
-        </h2>
+      <br /><br />
+      <h2 class="section__description">
+        <p>
+          We exist as a church to make Jesus Christ known. <br />
+          Our lives have been transformed through Him — His sacrifice and
+          resurrection. <br />
+          Therefore, our mission is to renew lives for Christ by experiencing
+          discipleship together in community.
+        </p>
+        <br />
+        <br />
+        <b>Welcome to Crosslife Christian Fellowship</b>
+        <br /><br />
+        <img class="about-pic" src="//placehold.it/600x600" alt="" />
+      </h2>
     </section>
-      
-    <section class="section" id="announcements">
+
+    <!-- <section class="section" id="announcements">
       <h1 class="section__title">ANNOUNCEMENTS</h1>
-      <br><br>
+      <br>
       <h2 class="section__description"></h2>
-          <!-- CAROUSEL -->
+          
           <div class="carousel">
             <button class="carousel__button carousel__button--left">
               <img src="images/left-btn.svg" alt="">
@@ -72,43 +81,16 @@
                         <source src="videos/easter-sunday.mp4" type="video/mp4">
                         <source src="videos/easter-sunday.webm" type="video/webm">
                       </video>
-                        <div class="carousel-video" id="easter-message">
-                          <br>
-                          <h1>COUNTDOWN TO RESURRECTION SUNDAY</h1>
-                          <p id="countdown-timer">
-                          </p>
-                        </div>
+                      <div class="carousel__video-text" id="easter-message">
+                        <br>
+                        <h1>COUNTDOWN TO RESURRECTION SUNDAY</h1>
+                        <p id="countdown-timer">
+                        </p>
+                      </div>
                     </div>
                   </li>
                   <li class="carousel__slide" id="announcements__bulletin" data-slide="1">
-                    <!-- <img class="carousel__image" src="images/slide2.jpg" alt="" class="carousel__image"> -->
-                    <ul class="announcements">
-                      <span class="announcements-header">LENT 2021</span>
-                      <li class="announcements-list">
-                        A season of repentance and reflection aimed at walking with Jesus on the road to Calvary. It’s a time to re-engage ourselves to lives of evangelism and discipleship.
-                      </li>
-                      <li class="announcements-list">Daily Lent Reflections (check your email)</li>
-                      <li class="announcements-list">Fasting/Abstaining during this season.</li>
-                      <br>
-                      <span class="announcements-header">PASSION WEEK</span>
-                      <li class="announcements-list">Passion Week is coming in one week! Mark your calendars.</li>
-                      <li class="announcements-list">Palm Sunday: March 28th</li>
-                      <li class="announcements-list">Daily Devotional each morning at 6:45AM (tentatively), Mar 29th - Apr 3rd </li>
-                      <li class="announcements-list">Prayer & Fasting – Sign-up next Sunday</li>
-                      <br>
-                      <span class="announcements-header">GOOD FRIDAY & RESURRECTION SUNDAY</span>
-                      <li class="announcements-list">Good Friday worship will be online (more information to come)</li>
-                      <li class="announcements-list">Resurrection Sunday will be in-person, outside on our chapel patio.</li>
-                      <li class="announcements-list">Live online worship will also be available.</li>
-                      <li class="announcements-list">The Youth Ministry will also join us for these worship services.</li>
-                      <br>
-                      <span class="announcements-header">COMMUNITY GROUPS</span>
-                      <li class="announcements-list">This week will be Activity Week for CGs. Come and join together for a good time!</li>
-                      <li class="announcements-list">South Bay CG on Tuesday nights | LA/OC CG on Wednesday nights</li>
-                      <br>
-                      <span class="announcements-header">PRAYER MEETING</span>
-                      <li class="announcements-list">Every Sunday morning @ 10AM, members of our church meet together to pray for our church. Everyone is invited to join in!</li>
-                    </ul>
+                    
                   </li>
                   <li class="carousel__slide" id="carousel__calendar" data-slide="2">
                     <img src="//placehold.it/600x600" alt="">
@@ -129,41 +111,65 @@
           <script src="js/carousel.js"></script>
         </h2>
       </div>
-    </section>
+    </section> -->
 
     <section class="section" id="sermons">
       <h1 class="section__title">RECENT SERMONS</h1>
-      <br>
+      <br />
       <h2 class="section__description">
-        LAST WEEK'S SERMON <br>
-        <iframe src="https://anchor.fm/crosslifecf/embed" height="" width="70%" frameborder="" scrolling="no"></iframe>
-        
-        <br><br>
-          <p>
-            Previous sermons can be found and listened to on <a class="sermons__spotify-link" href="spotify:show:4kThl6swDryOK9aY1jOCov">Spotify</a> or <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf">Anchor</a> <br>
-            To find/follow us, click or use the Spotify code below<br>
-          </p>
-        <br>        
-        <a href="spotify:show:4kThl6swDryOK9aY1jOCov"><img class="sermons__spotify-code" src="images/spotify-code.png" alt=""></a>
+        LAST WEEK'S SERMON <br />
+        <iframe
+          src="https://anchor.fm/crosslifecf/embed"
+          height=""
+          width="75%"
+          frameborder=""
+          scrolling="no"
+        ></iframe>
+
+        <br /><br />
+        <p>
+          Previous sermons can be found and listened to on
+          <a
+            class="sermons__spotify-link"
+            href="spotify:show:4kThl6swDryOK9aY1jOCov"
+            >Spotify</a
+          >
+          or
+          <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf"
+            >Anchor</a
+          >
+          <br />
+          To find/follow us, click or use the Spotify code below<br />
+        </p>
+        <br />
+        <a href="spotify:show:4kThl6swDryOK9aY1jOCov"
+          ><img
+            class="sermons__spotify-code"
+            src="images/spotify-code.png"
+            alt=""
+        /></a>
       </h2>
     </section>
 
     <section class="section" id="giving">
       <h1 class="section__title">GIVING</h1>
-      <br>
+      <br />
       <h2 class="section__description">
         <div class="giving-container">
           <div class="giving__section-2">
-            We offer online giving through Tithe.ly<br>
-            <p>Please note the following fees when giving via Tithe.ly:<br><br>
-            <span class="giving__tithely-fees">
-              2.9% + 0.30 per transaction <br>
-              ACH/Bank: 1% + 30¢ <br>
-              AMEX: 3.5% + 30¢ <br>
-            </span>
-            </p> 
-            <br>
-            <button class="tithely-give-btn" data-church-id="1294663">Give Online</button>
+            We offer online giving through Tithe.ly<br />
+            <p>
+              Please note the following fees when giving via Tithe.ly:<br /><br />
+              <span class="giving__tithely-fees">
+                2.9% + 0.30 per transaction <br />
+                ACH/Bank: 1% + 30¢ <br />
+                AMEX: 3.5% + 30¢ <br />
+              </span>
+            </p>
+            <br />
+            <button class="tithely-give-btn" data-church-id="1294663">
+              Give Online
+            </button>
             <script src="https://tithe.ly/widget/v2/give.js?3"></script>
             <script>
               var config = {};
@@ -175,13 +181,25 @@
     </section>
 
     <section class="section" id="location">
-      <h1 class="section__description">LOCATION</h1>
-      <br>
-      <h4 class="section__description">1340 W Gardena Blvd. Gardena, CA 90247
-        <br>
-        <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.1674815076735!2d-118.3003962416647!3d33.88102612192569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ca82a02543b9%3A0xe09b675c46012d1d!2s1340%20W%20Gardena%20Blvd%2C%20Gardena%2C%20CA%2090247!5e0!3m2!1sen!2sus!4v1615316196901!5m2!1sen!2sus" width="80%" height="60%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </h4>
+      <h1 class="section__title">LOCATION</h1>
+      <br />
+      <h2 class="section__description">
+        1340 W Gardena Blvd. Gardena, CA 90247<br />
+        Join us for service every Sunday @ 11:00AM <br />
+        <span class="covid"
+          >**Due to COVID-19, our worship services have moved to Zoom until
+          further notice</span
+        >
+        <br /><br />
+        <div class="google-maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6624.67009077572!2d-118.29930200000001!3d33.881024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cb45a41293ad%3A0x17357299a30e056c!2sCrosslife%20Christian%20Fellowship!5e0!3m2!1sen!2sus!4v1616889848226!5m2!1sen!2sus"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </h2>
     </section>
 
     <!-- CONTACT FORM -->
@@ -225,11 +243,50 @@
     <!-- ./ CONTACT FORM -->
 
     <footer class="footer">
-      <ul class="footer__nav">
-        <li class="footer__item">
-          <a class="footer__location" href="#about">ABOUT</a>
-        </li>
-      </ul>
+      <table class="footer__service-info">
+        <span class="footer__service">JOIN US FOR WORSHIP!</span>
+        <tr class="footer__service-location">
+          <td class="footer__service-location-img">
+            <svg
+              class="footer__item--location-img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                style="fill: #ffffff"
+                d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+              />
+            </svg>
+          </td>
+          <td class="footer__service-location-address">
+            1340 W Gardena Blvd <br />
+            Gardena, CA 90247 <br />
+          </td>
+        </tr>
+        <tr class="footer__service-time">
+          <td class="footer__service-time-img">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="footer__item--time-img"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                style="fill: #ffffff"
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447 1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"
+              />
+            </svg>
+          </td>
+          <td class="footer__service-time-info">
+            Sundays <br />
+            11:00AM <br />
+          </td>
+        </tr>
+      </table>
+      <ul class="footer__nav"></ul>
     </footer>
   </body>
 </html>
