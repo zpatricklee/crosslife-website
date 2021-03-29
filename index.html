@@ -118,13 +118,15 @@
       <br />
       <h2 class="section__description">
         LAST WEEK'S SERMON <br />
-        <iframe
-          src="https://anchor.fm/crosslifecf/embed"
-          height=""
-          width="75%"
-          frameborder=""
-          scrolling="no"
-        ></iframe>
+        <div id="anchor-player">
+          <iframe
+            src="https://anchor.fm/crosslifecf/embed"
+            height=""
+            width=""
+            frameborder=""
+            scrolling="no"
+          ></iframe>
+        </div>
 
         <br /><br />
         <p>
@@ -187,8 +189,8 @@
         1340 W Gardena Blvd. Gardena, CA 90247<br />
         Join us for service every Sunday @ 11:00AM <br />
         <span class="covid"
-          >**Due to COVID-19, our worship services have moved to Zoom until
-          further notice</span
+          >**Due to COVID-19, our worship services have moved to our outdoor
+          patio until further notice</span
         >
         <br /><br />
         <div class="google-maps">
@@ -236,7 +238,7 @@
           placeholder="Enter your message here..."
         ></textarea>
         <br /><br />
-        <input type="submit" value="SEND" />
+        <input class="form-btn" type="submit" value="SEND" />
         <br /><br /><br /><br />
       </form>
     </section>
@@ -244,7 +246,12 @@
 
     <footer class="footer">
       <table class="footer__service-info">
-        <span class="footer__service">JOIN US FOR WORSHIP!</span>
+        <tr class="footer__service-location">
+          <td class="footer__service-img">
+            <img src="./images/church.svg" alt="" />
+          </td>
+          <td class="footer__service-message"><b>JOIN US FOR WORSHIP!</b></td>
+        </tr>
         <tr class="footer__service-location">
           <td class="footer__service-location-img">
             <svg
@@ -286,7 +293,52 @@
           </td>
         </tr>
       </table>
-      <ul class="footer__nav"></ul>
+      <div class="footer__socials">
+        <p><b>FOLLOW US!</b></p>
+        <!-- <br /> -->
+        <ul>
+          <li class="footer__social-img">
+            <a
+              href="https://www.youtube.com/channel/UC9cqKtDJQFvr_0Yq09RLJRw"
+              class="footer__social-link"
+            >
+              <img id="social--instagram" src="./images/youtube.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__social-img">
+            <a
+              href="spotify:show:4kThl6swDryOK9aY1jOCov"
+              class="footer__social-link"
+            >
+              <img id="social--instagram" src="./images/spotify.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__social-img">
+            <a
+              href="https://www.instagram.com/crosslifechristianfellowship/?hl=en"
+              class="footer__social-link"
+            >
+              <img id="social--instagram" src="./images/instagram.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__social-img">
+            <a
+              href="https://www.facebook.com/CrosslifeChristianFellowship/"
+              class="footer__social-link"
+            >
+              <img id="social--instagram" src="./images/facebook.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__social-img">
+            <a
+              href="https://www.yelp.com/biz/crosslife-christian-fellowship-gardena"
+              class="footer__social-link"
+            >
+              <img id="social--instagram" src="./images/yelp.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

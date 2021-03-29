@@ -290,6 +290,16 @@ body {
   border: 1px solid white;
 }
 
+#anchor-player {
+  width: 100%;
+
+  iframe {
+    width: 60%;
+    min-width: 400px;
+    max-width: 800px;
+  }
+}
+
 /* GIVING */
 .section#giving {
   color: white;
@@ -345,23 +355,21 @@ body {
 }
 
 /* LOCATION */
-.section#location {
-  // height: 80vh;
-}
-
 .google-maps {
   position: relative;
   padding-bottom: 60%; // This is the aspect ratio
   height: 100%;
   overflow: hidden;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .google-maps iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100% !important;
+  // max-width: 1920px;
   height: 100% !important;
+  max-height: 1000px;
 }
 
 .covid {
@@ -374,22 +382,29 @@ body {
   transition: background-color 1.5s, color 1.5s;
 }
 
-.contact {
+#contact {
   .input {
     font-size: 1.2rem;
     box-shadow: 10px 10px 5px;
+    max-width: 1000px;
   }
 
   input {
     padding: 0.5rem 0.5rem;
     box-sizing: border-box;
-    width: 60%;
+    width: 100%;
   }
 
   textarea {
     padding: 0.5rem 0.5rem;
     box-sizing: border-box;
-    width: 60%;
+    width: 100%;
+  }
+
+  .form-btn {
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 1000px;
   }
 }
 
@@ -400,30 +415,48 @@ body {
 
 /* FOOTER */
 .footer {
+  font-size: 1rem;
   background-color: var(--color-primary-darker);
-  padding: 3rem 2rem;
+  padding: 2rem 0;
   color: var(--color-secondary);
-}
-
-.footer__service {
-  // border: 1px solid white;
-  // padding-bottom: 0;
-  // margin-bottom: 0;
-  padding-left: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer__service-info {
-  // border: 1px solid white;
   border-spacing: 1rem;
+  // margin-bottom: 3rem;
+  // border: 1px solid green;
+  min-width: 260px;
+  align-self: center;
 }
 
-.footer__nav {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
+.footer__socials {
+  // border: 1px solid white;
+  padding-top: 1.1rem;
+  max-width: 250px;
+  margin-bottom: 0;
+  // align-self: center;
 
-.footer__link {
-  color: inherit;
-  text-decoration: none;
+  p {
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    // flex: 1 1 10px;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 2rem;
+  }
 }

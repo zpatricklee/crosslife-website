@@ -302,6 +302,16 @@ body {
   border: 1px solid white;
 }
 
+#anchor-player {
+  width: 100%;
+}
+
+#anchor-player iframe {
+  width: 60%;
+  min-width: 400px;
+  max-width: 800px;
+}
+
 /* GIVING */
 .section#giving {
   color: white;
@@ -370,7 +380,6 @@ body {
   padding-bottom: 60%;
   height: 100%;
   overflow: hidden;
-  border: 1px solid red;
 }
 
 .google-maps iframe {
@@ -379,6 +388,7 @@ body {
   left: 0;
   width: 100% !important;
   height: 100% !important;
+  max-height: 1000px;
 }
 
 .covid {
@@ -391,24 +401,31 @@ body {
   transition: background-color 1.5s, color 1.5s;
 }
 
-.contact .input {
+#contact .input {
   font-size: 1.2rem;
   -webkit-box-shadow: 10px 10px 5px;
           box-shadow: 10px 10px 5px;
+  max-width: 1000px;
 }
 
-.contact input {
+#contact input {
   padding: 0.5rem 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 60%;
+  width: 100%;
 }
 
-.contact textarea {
+#contact textarea {
   padding: 0.5rem 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 60%;
+  width: 100%;
+}
+
+#contact .form-btn {
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .contact-focus {
@@ -418,31 +435,55 @@ body {
 
 /* FOOTER */
 .footer {
+  font-size: 1rem;
   background-color: var(--color-primary-darker);
-  padding: 3rem 2rem;
+  padding: 2rem 0;
   color: var(--color-secondary);
-}
-
-.footer__service {
-  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .footer__service-info {
   border-spacing: 1rem;
+  min-width: 260px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.footer__nav {
-  list-style: none;
+.footer__socials {
+  padding-top: 1.1rem;
+  max-width: 250px;
+  margin-bottom: 0;
+}
+
+.footer__socials p {
+  text-align: center;
+}
+
+.footer__socials ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.footer__link {
-  color: inherit;
-  text-decoration: none;
+.footer__socials li {
+  margin: 0.5rem;
+  margin-bottom: 0;
+}
+
+.footer__socials img {
+  width: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
