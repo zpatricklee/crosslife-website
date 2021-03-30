@@ -11,7 +11,7 @@ const contactSection = document.getElementById("contact");
 const announcementsSection = document.getElementById("announcements");
 const navLinks = document.querySelector(".nav__links");
 
-const allSections = document.querySelectorAll(".section");
+const allSections = document.querySelectorAll(".section-container");
 
 const handleHover = function (e) {
   // alert(e);
@@ -50,19 +50,6 @@ allSections.forEach((section) => {
 
 // Event listeners
 window.addEventListener("scroll", function (e) {
-  // console.log("sermons" + sermonsSection.offsetTop);
-  // console.log("giving" + givingSection.offsetTop);
-  // console.log("location" + locationSection.offsetTop);
-  // console.log("contact" + contactSection.offsetTop);
-
-  // console.log(nav.querySelectorAll(".nav__link"));
-  // console.log(window.scrollY);
-  // console.log(
-  //   window.scrollY >= sermonsSection.offsetTop &&
-  //     window.scrollY < givingSection.offsetTop
-  // );
-  // nav.querySelectorAll(".nav__link").forEach((n) => console.log(n.classList));
-
   if (
     window.scrollY >= homeSection.offsetTop &&
     window.scrollY < sermonsSection.offsetTop
@@ -108,13 +95,17 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
-// window.addEventListener("scroll", function (e) {
-//   const contactHeight = contact.offsetTop;
+window.addEventListener("scroll", function (e) {
+  const contactHeight = contact.offsetTop;
 
-//   if (window.scrollY >= 0.85 * contactHeight) {
-//     contact.classList.add("contact-focus");
-//   } else contact.classList.remove("contact-focus");
-// });
+  if (window.scrollY >= 0.85 * contactHeight) {
+    contact.classList.remove("contact-unfocus");
+    contact.classList.add("contact-focus");
+  } else {
+    contact.classList.remove("contact-focus");
+    contact.classList.add("contact-unfocus");
+  }
+});
 
 // nav.addEventListener("mouseover", handleHover.bind(0.3));
 // nav.addEventListener("mouseout", handleHover.bind(1));

@@ -35,9 +35,9 @@ h2 {
 }
 
 body {
-  font-size: 28px;
+  font-size: 24px;
   font-family: $body-font;
-  font-weight: 300;
+  font-weight: 400;
   background-color: $light-grey;
   color: black;
   // background: radial-gradient(#0c1229, rgb(220, 220, 220));
@@ -46,12 +46,19 @@ body {
 }
 
 /* GENERAL ELEMENTS */
-.section {
-  text-align: center;
+.section-container {
   width: 100%;
   border-top: 1px solid $gold;
-  padding: 300px 10px;
   transition: transform 1.5s, opacity 1.5s;
+}
+
+.section {
+  text-align: center;
+  // width: 100%;
+  // min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 300px 10px;
 }
 
 .section__title {
@@ -67,7 +74,9 @@ body {
 }
 
 #home {
-  padding-top: 160px;
+  .section {
+    padding-top: 160px;
+  }
 }
 
 .section--hidden {
@@ -168,12 +177,36 @@ header {
 #announcements {
   padding-top: 160px;
   padding-bottom: 100px;
+  // border: 2px solid green;
+  // background-color: rgb(80, 0, 105);
+}
+
+.announcements {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  // flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+
+  text-align: left;
+  padding-left: 20px;
+  font-weight: lighter;
+  // border: 1px solid red;
 }
 
 .announcements-list {
   // font-size: 1.4rem;
+  // text-align: left;
   font-size: 24px;
   font-weight: 400;
+}
+
+.announcements-header {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 // CAROUSEL
@@ -301,20 +334,6 @@ header {
   text-align: center;
 }
 
-.announcements {
-  margin-left: 25px;
-  text-align: left;
-  // font-size: 1.1rem;
-  font-weight: lighter;
-  // border: 1px solid white;
-}
-
-.announcements-header {
-  font-size: 24px;
-  font-weight: 400;
-  text-decoration: underline;
-}
-
 /* SERMONS */
 .youtube-livestream {
   iframe {
@@ -323,6 +342,10 @@ header {
     min-height: 600px;
     max-width: 1000px;
   }
+}
+
+#livestream {
+  text-decoration: underline;
 }
 
 .sermons__spotify-link {
@@ -362,7 +385,9 @@ header {
 }
 
 /* GIVING */
-.section#giving {
+.section-container#giving {
+  max-width: 100%;
+  // margin: 0;
   color: white;
   // background: black;
   background-image: url(../images/giving.jpg);
@@ -441,12 +466,15 @@ header {
 /* CONTACT */
 .section__contact {
   // color: white;
-  transition: background-color 1.5s, color 1.5s;
 }
 
 #contact {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  transition: background-color 1s, color 1s, transform 1.5s;
+
+  .section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   .input {
     font-size: 1.2rem;
@@ -488,10 +516,14 @@ header {
     background-color: rgb(150, 150, 150);
   }
 }
-
 .contact-focus {
-  color: #000;
-  background-color: var(--color-secondary);
+  color: black;
+  background-color: white;
+}
+
+.contact-unfocus {
+  color: white;
+  background-color: var(--color-primary-darker);
 }
 
 /* FOOTER */

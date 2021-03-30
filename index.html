@@ -38,10 +38,10 @@
             <a class="nav__link" id="nav-location" href="./index.html#location">LOCATION</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-announcements" href="./announcements.html">ANNOUNCEMENTS</a>
+            <a class="nav__link" id="nav-contact" href="./index.html#contact">CONTACT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-contact" href="./index.html#contact">CONTACT</a>
+            <a class="nav__link" id="nav-announcements" href="./announcements.html">ANNOUNCEMENTS</a>
           </li>
         </ul>
         <div class="hamburger-menu--icon">
@@ -50,7 +50,8 @@
       </nav>
     </header>
 
-    <section class="section" id="home">
+    <section class="section-container" id="home">
+      <div class="section">
       <h1 class="section__title">Welcome to Crosslife Christian Fellowship</h1>
       <br /><br />
       <p class="section__content">
@@ -65,9 +66,11 @@
       </p>
       <br />
       <img class="home-pic" src="//placehold.it/600x600" alt="" />
+      </div>
     </section>
 
-    <!-- <section class="section" id="announcements">
+    <!-- <section class="sect-containeri>on"
+        <div class="section" id="announcements">
       <h1 class="section__title">ANNOUNCEMENTS</h1>
       <br>
       <h2 class="section__content"></h2>
@@ -116,52 +119,56 @@
       </div>
     </section> -->
 
-    <section class="section" id="sermons">
-      <h1 class="section__title">SERMONS</h1>
-      <br />
-      <br>
-      <p class="section__content">
-        Join us LIVE every Sunday @ 11:00AM! <br><br>
-        <div class="youtube-livestream">
-          <iframe width="" height="" src="https://www.youtube.com/embed/6y3FfxF8PDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <br><br>
-        LAST WEEK'S SERMON <br />
-        <div id="anchor-player">
-          <iframe
-            src="https://anchor.fm/crosslifecf/embed"
-            height=""
-            width=""
-            frameborder=""
-            scrolling="no"
-          ></iframe>
-        </div>
-
-        <br /><br />
-          Previous sermons can be found and listened to on
-          <a
-            class="sermons__spotify-link"
-            href="spotify:show:4kThl6swDryOK9aY1jOCov"
-            ><b>Spotify</b></a
-          >
-          or
-          <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf"
-            ><b>Anchor</b></a
-          >
-          <br />
-          To find/follow us, click or use the Spotify code below<br />
+    <section class="section-container" id="sermons">
+      <div class="section" >
+        <h1 class="section__title">SERMONS</h1>
         <br />
-        <a href="spotify:show:4kThl6swDryOK9aY1jOCov"
-          ><img
-            class="sermons__spotify-code"
-            src="images/spotify-code.png"
-            alt=""
-        /></a>
-      </p>
+        <br>
+        <p class="section__content">
+          <span id="livestream">Join us LIVE every Sunday @ 11:00AM!</span>
+          <br><br>
+          <div class="youtube-livestream">
+            <iframe width="" height="" src="https://www.youtube.com/embed/6y3FfxF8PDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+  
+          <br><br>
+          LAST WEEK'S SERMON <br />
+          <div id="anchor-player">
+            <iframe
+              src="https://anchor.fm/crosslifecf/embed"
+              height=""
+              width=""
+              frameborder=""
+              scrolling="no"
+            ></iframe>
+          </div>
+  
+          <br /><br />
+            Previous sermons can be found and listened to on
+            <a
+              class="sermons__spotify-link"
+              href="spotify:show:4kThl6swDryOK9aY1jOCov"
+              ><b>Spotify</b></a
+            >
+            or
+            <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf"
+              ><b>Anchor</b></a
+            >
+            <br />
+            To find/follow us, click or use the Spotify code below<br />
+          <br />
+          <a href="spotify:show:4kThl6swDryOK9aY1jOCov"
+            ><img
+              class="sermons__spotify-code"
+              src="images/spotify-code.png"
+              alt=""
+          /></a>
+        </p>
+      </div>
     </section>
 
-    <section class="section" id="giving">
+    <section class="section-container" id="giving">
+      <div class="section" >
       <h1 class="section__title">GIVING</h1>
       <br />
       <p class="section__content">
@@ -187,9 +194,11 @@
           </div>
         </div>
       </p>
+      </div>
     </section>
 
-    <section class="section" id="location">
+    <section class="section-container" id="location">
+      <div class="section" >
       <h1 class="section__title">LOCATION</h1>
       <br />
       <p class="section__content">
@@ -209,46 +218,49 @@
           ></iframe>
         </div>
       </p>
+      </div>
     </section>
 
     <!-- CONTACT FORM -->
-    <section class="section section__contact" id="contact">
-      <h1 class="section__title">CONTACT US</h1>
-      <div class="section__content">
-        <form
-          class="contact"
-          action="https://formspree.io/f/xaylrnvy"
-          method="POST"
-        >
-          <br />
-          <input
-            class="input"
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <br />
-          <input
-            class="input"
-            type="email"
-            name="_replyto"
-            placeholder="Email"
-            style="margin-top: 1rem"
-            required
-          />
-          <br /><br />
-          <textarea
-            class="input"
-            name="message"
-            id="email-message"
-            rows="12"
-            placeholder="Enter your message here..."
-          ></textarea>
-          <br /><br />
-          <input class="form-btn" type="submit" value="SEND" />
-          <br /><br /><br /><br />
-        </form>
+    <section class="section-container" id="contact">
+      <div class="section" >
+        <h1 class="section__title">CONTACT US</h1>
+        <div class="section__content">
+          <form
+            class="contact"
+            action="https://formspree.io/f/xaylrnvy"
+            method="POST"
+          >
+            <br />
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <br />
+            <input
+              class="input"
+              type="email"
+              name="_replyto"
+              placeholder="Email"
+              style="margin-top: 1rem"
+              required
+            />
+            <br /><br />
+            <textarea
+              class="input"
+              name="message"
+              id="email-message"
+              rows="12"
+              placeholder="Enter your message here..."
+            ></textarea>
+            <br /><br />
+            <input class="form-btn" type="submit" value="SEND" />
+            <br /><br /><br /><br />
+          </form>
+        </div>
       </div>
     </section>
     <!-- ./ CONTACT FORM -->
