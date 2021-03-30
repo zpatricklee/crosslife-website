@@ -3,7 +3,13 @@
 // Selectors
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
-const contact = document.querySelector("#contact");
+const aboutSection = document.getElementById("about");
+const sermonsSection = document.getElementById("sermons");
+const givingSection = document.getElementById("giving");
+const locationSection = document.getElementById("location");
+const contactSection = document.getElementById("contact");
+const announcementsSection = document.getElementById("announcements");
+const navLinks = document.querySelector(".nav__links");
 
 const allSections = document.querySelectorAll(".section");
 
@@ -40,16 +46,78 @@ allSections.forEach((section) => {
   section.classList.add("section--hidden");
 });
 
+// const navSectionObserver = new IntersectionObserver({});
+
 // Event listeners
 window.addEventListener("scroll", function (e) {
-  const contactHeight = contact.offsetTop;
+  // console.log("sermons" + sermonsSection.offsetTop);
+  // console.log("giving" + givingSection.offsetTop);
+  // console.log("location" + locationSection.offsetTop);
+  // console.log("contact" + contactSection.offsetTop);
 
-  if (window.scrollY >= 0.85 * contactHeight) {
-    contact.classList.add("contact-focus");
-  } else contact.classList.remove("contact-focus");
+  // console.log(nav.querySelectorAll(".nav__link"));
+  // console.log(window.scrollY);
+  // console.log(
+  //   window.scrollY >= sermonsSection.offsetTop &&
+  //     window.scrollY < givingSection.offsetTop
+  // );
+  // nav.querySelectorAll(".nav__link").forEach((n) => console.log(n.classList));
+
+  if (
+    window.scrollY >= aboutSection.offsetTop &&
+    window.scrollY < sermonsSection.offsetTop
+  ) {
+    nav
+      .querySelectorAll(".nav__link")
+      .forEach((n) => n.classList.remove("nav--active"));
+
+    document.getElementById("nav-about").classList.add("nav--active");
+  } else if (
+    window.scrollY >= sermonsSection.offsetTop &&
+    window.scrollY < givingSection.offsetTop
+  ) {
+    nav
+      .querySelectorAll(".nav__link")
+      .forEach((n) => n.classList.remove("nav--active"));
+
+    document.getElementById("nav-sermons").classList.add("nav--active");
+  } else if (
+    window.scrollY >= givingSection.offsetTop &&
+    window.scrollY < locationSection.offsetTop
+  ) {
+    nav
+      .querySelectorAll(".nav__link")
+      .forEach((n) => n.classList.remove("nav--active"));
+
+    document.getElementById("nav-giving").classList.add("nav--active");
+  } else if (
+    window.scrollY >= locationSection.offsetTop &&
+    window.scrollY < contactSection.offsetTop
+  ) {
+    nav
+      .querySelectorAll(".nav__link")
+      .forEach((n) => n.classList.remove("nav--active"));
+
+    document.getElementById("nav-location").classList.add("nav--active");
+  } else {
+    nav
+      .querySelectorAll(".nav__link")
+      .forEach((n) => n.classList.remove("nav--active"));
+
+    document.getElementById("nav-contact").classList.add("nav--active");
+  }
 });
-nav.addEventListener("mouseover", handleHover.bind(0.3));
-nav.addEventListener("mouseout", handleHover.bind(1));
+
+// window.addEventListener("scroll", function (e) {
+//   const contactHeight = contact.offsetTop;
+
+//   if (window.scrollY >= 0.85 * contactHeight) {
+//     contact.classList.add("contact-focus");
+//   } else contact.classList.remove("contact-focus");
+// });
+
+// nav.addEventListener("mouseover", handleHover.bind(0.3));
+// nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////////////////////////////////////////////////
 // COUNTDOWN FUNCTIONALITY

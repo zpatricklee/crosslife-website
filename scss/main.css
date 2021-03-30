@@ -16,18 +16,22 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 
-* h1 {
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
   font-size: 2rem;
 }
 
 body {
-  font-size: 16px;
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
-  background-color: var(--color-primary);
-  color: white;
+  background-color: #efefef;
+  color: black;
 }
 
 /* GENERAL ELEMENTS */
@@ -35,28 +39,28 @@ body {
   text-align: center;
   width: 100%;
   border-top: 1px solid #ffffff;
-  padding: 15rem 2rem;
+  padding: 300px 10px;
   -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
   transition: opacity 1.5s, -webkit-transform 1.5s;
   transition: transform 1.5s, opacity 1.5s;
   transition: transform 1.5s, opacity 1.5s, -webkit-transform 1.5s;
 }
 
-.section__description {
-  font-size: 1.4rem;
-  font-weight: 200;
+.section__title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+
+.section__content {
+  font-family: "Raleway", sans-serif;
 }
 
 .section#about {
-  padding-top: 9rem;
+  padding-top: 200px;
 }
 
 .section#location {
   padding-top: 7rem;
-}
-
-.section p {
-  font-weight: 400;
 }
 
 .section--hidden {
@@ -66,7 +70,13 @@ body {
 }
 
 /* NAVIGATION */
+header {
+  font-family: "Proza Libre", sans-serif;
+}
+
 .nav {
+  font-size: 18px;
+  font-weight: 400;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,17 +87,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5rem;
+  height: 80px;
   width: 100%;
+  -webkit-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
   padding-right: 1rem;
   z-index: 10;
   background-color: var(--color-secondary);
   color: black;
-  font-weight: 400;
 }
 
 .nav__links {
-  font-size: 1.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,27 +105,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-left: 0;
 }
 
 .nav__item {
-  margin-left: 0rem;
-}
-
-@media (min-width: 1000px) {
-  .nav__item {
-    margin-left: 1.5rem;
-  }
+  padding-left: 20px;
 }
 
 .hamburger-menu--icon {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .nav__links {
     display: none;
   }
@@ -135,14 +136,19 @@ body {
 }
 
 .nav__link {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
   text-decoration: none;
   color: inherit;
+  padding-bottom: 27px;
+}
+
+.nav--active {
+  color: #aa9055;
+  border-bottom: 3px solid #aa9055;
 }
 
 .nav__link:hover {
-  text-decoration: underline;
+  color: #aa9055;
+  border-bottom: 3px solid #aa9055;
 }
 
 /* ABOUT */
@@ -152,10 +158,6 @@ body {
 }
 
 /* ANNOUNCEMENTS */
-.announcements {
-  font-size: 1.4rem;
-}
-
 .carousel {
   display: block;
   position: relative;
@@ -270,11 +272,14 @@ body {
           transform: translate(-50%, -50%);
 }
 
-#announcement-banner {
-  font-size: 1.1rem;
+#announcement-banner-text {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 #easter-countdown {
+  font-size: 16px;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -309,13 +314,15 @@ body {
 }
 
 .sermons__spotify-code:hover {
-  border: 1px solid white;
+  border: 3px solid #1db954;
 }
 
 #anchor-player iframe {
   width: 100%;
   min-width: 300px;
   max-width: 1000px;
+  border: 3px solid grey;
+  border-radius: 7px;
 }
 
 /* GIVING */
@@ -407,21 +414,32 @@ body {
   transition: background-color 1.5s, color 1.5s;
 }
 
+#contact {
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+
 #contact .input {
   font-size: 1.2rem;
-  -webkit-box-shadow: 10px 10px 5px;
-          box-shadow: 10px 10px 5px;
+  -webkit-box-shadow: 0px 5px 5px 5px #969696;
+          box-shadow: 0px 5px 5px 5px #969696;
   max-width: 1000px;
 }
 
 #contact input {
+  font-family: "Raleway", sans-serif;
   padding: 0.5rem 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  border: none;
+  border-radius: 3px;
 }
 
 #contact textarea {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 3px;
   padding: 0.5rem 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -429,9 +447,17 @@ body {
 }
 
 #contact .form-btn {
-  font-size: 1.1rem;
+  font-weight: 400;
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-size: 1.2rem;
   width: 100%;
   max-width: 1000px;
+}
+
+#contact .form-btn:hover {
+  color: white;
+  background-color: grey;
 }
 
 .contact-focus {
@@ -440,6 +466,11 @@ body {
 }
 
 /* FOOTER */
+footer {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .footer {
   font-size: 1rem;
   background-color: var(--color-primary-darker);

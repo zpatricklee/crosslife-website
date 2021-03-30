@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.css" />
     <title>Crosslife</title>
     <script defer src="js/script.js"></script>
@@ -16,7 +18,7 @@
     <header class="header">
       <nav class="nav">
         <a href="./index.html"
-          ><img src="//placehold.it/80x80" alt="" class="nav__logo"
+          ><img src="//placehold.it/240x80" alt="" class="nav__logo"
         /></a>
         <div id="announcement-banner">
           <p id="announcement-banner-text">RESURRECTION SUNDAY</p>
@@ -24,22 +26,22 @@
         </div>
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="./index.html#about">ABOUT</a>
+            <a class="nav__link nav--active" id="nav-about" href="./index.html#about">ABOUT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./index.html#sermons">SERMONS</a>
+            <a class="nav__link" id="nav-sermons" href="./index.html#sermons">SERMONS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./index.html#giving">GIVING</a>
+            <a class="nav__link" id="nav-giving" href="./index.html#giving">GIVING</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./index.html#location">LOCATION</a>
+            <a class="nav__link" id="nav-location" href="./index.html#location">LOCATION</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./announcements.html">ANNOUNCEMENTS</a>
+            <a class="nav__link" id="nav-announcements" href="./announcements.html">ANNOUNCEMENTS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./index.html#contact">CONTACT</a>
+            <a class="nav__link" id="nav-contact" href="./index.html#contact">CONTACT</a>
           </li>
         </ul>
         <div class="hamburger-menu--icon">
@@ -51,26 +53,25 @@
     <section class="section" id="about">
       <h1 class="section__title">ABOUT</h1>
       <br /><br />
-      <h2 class="section__description">
-        <p>
-          We exist as a church to make Jesus Christ known. <br />
-          Our lives have been transformed through Him — His sacrifice and
-          resurrection. <br />
-          Therefore, our mission is to renew lives for Christ by experiencing
-          discipleship together in community.
-        </p>
+      <p class="section__content">
+        We exist as a church to make Jesus Christ known. <br />
+        Our lives have been transformed through Him — His sacrifice and
+        resurrection. <br />
+        Therefore, our mission is to renew lives for Christ by experiencing
+        discipleship together in community.
         <br />
         <br />
-        <b>Welcome to Crosslife Christian Fellowship</b>
-        <br /><br />
-        <img class="about-pic" src="//placehold.it/600x600" alt="" />
-      </h2>
+        <br />
+      </p>
+      <h2>Welcome to Crosslife Christian Fellowship</h2>
+      <br />
+      <img class="about-pic" src="//placehold.it/600x600" alt="" />
     </section>
 
     <!-- <section class="section" id="announcements">
       <h1 class="section__title">ANNOUNCEMENTS</h1>
       <br>
-      <h2 class="section__description"></h2>
+      <h2 class="section__content"></h2>
           
           <div class="carousel">
             <button class="carousel__button carousel__button--left">
@@ -119,7 +120,8 @@
     <section class="section" id="sermons">
       <h1 class="section__title">RECENT SERMONS</h1>
       <br />
-      <h2 class="section__description">
+      <br>
+      <p class="section__content">
         LAST WEEK'S SERMON <br />
         <div id="anchor-player">
           <iframe
@@ -132,20 +134,18 @@
         </div>
 
         <br /><br />
-        <p>
           Previous sermons can be found and listened to on
           <a
             class="sermons__spotify-link"
             href="spotify:show:4kThl6swDryOK9aY1jOCov"
-            >Spotify</a
+            ><b>Spotify</b></a
           >
           or
           <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf"
-            >Anchor</a
+            ><b>Anchor</b></a
           >
           <br />
           To find/follow us, click or use the Spotify code below<br />
-        </p>
         <br />
         <a href="spotify:show:4kThl6swDryOK9aY1jOCov"
           ><img
@@ -153,24 +153,23 @@
             src="images/spotify-code.png"
             alt=""
         /></a>
-      </h2>
+      </p>
     </section>
 
     <section class="section" id="giving">
       <h1 class="section__title">GIVING</h1>
       <br />
-      <h2 class="section__description">
+      <p class="section__content">
         <div class="giving-container">
           <div class="giving__section-2">
             We offer online giving through Tithe.ly<br />
-            <p>
+
               Please note the following fees when giving via Tithe.ly:<br /><br />
               <span class="giving__tithely-fees">
                 2.9% + 0.30 per transaction <br />
                 ACH/Bank: 1% + 30¢ <br />
                 AMEX: 3.5% + 30¢ <br />
               </span>
-            </p>
             <br />
             <button class="tithely-give-btn" data-church-id="1294663">
               Give Online
@@ -182,13 +181,13 @@
             </script>
           </div>
         </div>
-      </h2>
+      </p>
     </section>
 
     <section class="section" id="location">
       <h1 class="section__title">LOCATION</h1>
       <br />
-      <h2 class="section__description">
+      <p class="section__content">
         1340 W Gardena Blvd. Gardena, CA 90247<br />
         Join us for service every Sunday @ 11:00AM <br />
         <span class="covid"
@@ -204,46 +203,48 @@
             loading="lazy"
           ></iframe>
         </div>
-      </h2>
+      </p>
     </section>
 
     <!-- CONTACT FORM -->
     <section class="section section__contact" id="contact">
-      <h1>CONTACT US</h1>
-      <form
-        class="contact"
-        action="https://formspree.io/f/xaylrnvy"
-        method="POST"
-      >
-        <br />
-        <input
-          class="input"
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
-        <br />
-        <input
-          class="input"
-          type="email"
-          name="_replyto"
-          placeholder="Email"
-          style="margin-top: 1rem"
-          required
-        />
-        <br /><br />
-        <textarea
-          class="input"
-          name="message"
-          id="email-message"
-          rows="10"
-          placeholder="Enter your message here..."
-        ></textarea>
-        <br /><br />
-        <input class="form-btn" type="submit" value="SEND" />
-        <br /><br /><br /><br />
-      </form>
+      <h1 class="section__title">CONTACT US</h1>
+      <div class="section__content">
+        <form
+          class="contact"
+          action="https://formspree.io/f/xaylrnvy"
+          method="POST"
+        >
+          <br />
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <br />
+          <input
+            class="input"
+            type="email"
+            name="_replyto"
+            placeholder="Email"
+            style="margin-top: 1rem"
+            required
+          />
+          <br /><br />
+          <textarea
+            class="input"
+            name="message"
+            id="email-message"
+            rows="12"
+            placeholder="Enter your message here..."
+          ></textarea>
+          <br /><br />
+          <input class="form-btn" type="submit" value="SEND" />
+          <br /><br /><br /><br />
+        </form>
+      </div>
     </section>
     <!-- ./ CONTACT FORM -->
 

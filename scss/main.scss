@@ -9,26 +9,37 @@
   --color-secondary-lighter: ;
   --color-tertiary-lighter: ;
 }
+$title-font: "Nunito Sans", sans-serif;
+$body-font: "Raleway", sans-serif;
+// $background-color:
+$light-grey: rgb(239, 239, 239);
+$gold: rgba(170, 144, 85, 1);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
   // PICK FONT
-  font-family: "Poppins", sans-serif;
-  // background: linear-gradient(white, grey, black);
-  // background-repeat: none;
-  h1 {
-    font-size: 2rem;
-  }
+  //   font-family: 'Nunito Sans', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  // color: $gold;
+}
+h2 {
+  font-size: 2rem;
 }
 
 body {
-  font-size: 16px;
+  font-size: 28px;
+  font-family: $body-font;
   font-weight: 300;
-  background-color: var(--color-primary);
-  color: white;
+  background-color: $light-grey;
+  color: black;
   // background: radial-gradient(#0c1229, rgb(220, 220, 220));
   // background: content-box radial-gradient(#0c1229, rgb(220, 220, 220));
   // background: linear-gradient(white, grey, black);
@@ -39,17 +50,24 @@ body {
   text-align: center;
   width: 100%;
   border-top: 1px solid #ffffff;
-  padding: 15rem 2rem;
+  padding: 300px 10px;
   transition: transform 1.5s, opacity 1.5s;
 }
 
-.section__description {
-  font-size: 1.4rem;
-  font-weight: 200;
+.section__title {
+  // font-family: "Nunito Sans", sans-serif;
+  font-family: $title-font;
+  font-weight: 400;
+}
+
+.section__content {
+  font-family: $body-font;
+  // font-size: 1.4rem;
+  // font-weight: 200;
 }
 
 .section#about {
-  padding-top: 9rem;
+  padding-top: 200px;
 }
 
 .section#location {
@@ -57,7 +75,7 @@ body {
 }
 
 .section p {
-  font-weight: 400;
+  // font-weight: 200;
 }
 
 .section--hidden {
@@ -66,18 +84,25 @@ body {
 }
 
 /* NAVIGATION */
+header {
+  font-family: "Proza Libre", sans-serif;
+}
+
 .nav {
+  font-size: 18px;
+  font-weight: 400;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 80px;
   width: 100%;
+  box-shadow: 0px 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
   padding-right: 1rem;
   z-index: 10;
   background-color: var(--color-secondary);
   color: black;
-  font-weight: 400;
+  // font-weight: 400;
   // transition: 0.4s all;
 }
 
@@ -86,38 +111,22 @@ body {
 // }
 
 .nav__links {
-  font-size: 1.1rem;
+  // font-size: 0.8rem;
   display: flex;
   align-items: center;
   list-style: none;
-  // background-color: burlywood;
-  justify-content: space-between;
-  // justify-content: space-around;
   padding-left: 0;
 }
 
 .nav__item {
-  margin-left: 0rem;
-  // background-color: #1db954;
-
-  @media (min-width: 1000px) {
-    margin-left: 1.5rem;
-  }
-
-  // @media (min-width: 960px) {
-  //   margin-left: 2rem;
-  // }
-
-  // @media (min-width: 1200px) {
-  //   margin-left: 3rem;
-  // }
+  padding-left: 20px;
 }
 
 .hamburger-menu--icon {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .nav__links {
     display: none;
   }
@@ -138,13 +147,22 @@ body {
 }
 
 .nav__link {
-  transition-duration: 0.5s;
+  // transition-duration: 0.5s;
   text-decoration: none;
   color: inherit;
+  padding-bottom: 27px;
+  // border: 1px solid black;
+}
+
+.nav--active {
+  color: $gold;
+  border-bottom: 3px solid $gold;
 }
 
 .nav__link:hover {
-  text-decoration: underline;
+  // text-decoration: underline;
+  color: $gold;
+  border-bottom: 3px solid $gold;
 }
 
 /* ABOUT */
@@ -155,7 +173,7 @@ body {
 
 /* ANNOUNCEMENTS */
 .announcements {
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
 }
 
 // CAROUSEL
@@ -269,13 +287,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#announcement-banner {
+#announcement-banner-text {
+  font-size: 16px;
+  font-weight: 300;
   // margin-left: 1.5rem;
-  font-size: 1.1rem;
+  // font-size: 1.1rem;
   // border: 1px solid black;
 }
 
 #easter-countdown {
+  font-size: 16px;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -312,7 +334,7 @@ body {
 }
 
 .sermons__spotify-code:hover {
-  border: 1px solid white;
+  border: 3px solid #1db954;
 }
 
 #anchor-player {
@@ -320,6 +342,8 @@ body {
     width: 100%;
     min-width: 300px;
     max-width: 1000px;
+    border: 3px solid grey;
+    border-radius: 7px;
   }
 }
 
@@ -406,28 +430,46 @@ body {
 }
 
 #contact {
+  padding-top: 300px;
+  padding-bottom: 150px;
+
   .input {
     font-size: 1.2rem;
-    box-shadow: 10px 10px 5px;
+    box-shadow: 0px 5px 5px 5px rgb(150, 150, 150);
     max-width: 1000px;
   }
 
   input {
+    font-family: $body-font;
     padding: 0.5rem 0.5rem;
     box-sizing: border-box;
     width: 100%;
+    border: none;
+    border-radius: 3px;
   }
 
   textarea {
+    font-family: $body-font;
+    border: none;
+    border-radius: 3px;
     padding: 0.5rem 0.5rem;
     box-sizing: border-box;
     width: 100%;
   }
 
   .form-btn {
-    font-size: 1.1rem;
+    font-weight: 400;
+    border: 2px solid grey;
+    border-radius: 5px;
+    // background-color: rgb(231, 231, 231);
+    font-size: 1.2rem;
     width: 100%;
     max-width: 1000px;
+  }
+
+  .form-btn:hover {
+    color: white;
+    background-color: grey;
   }
 }
 
@@ -437,6 +479,11 @@ body {
 }
 
 /* FOOTER */
+footer {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .footer {
   font-size: 1rem;
   background-color: var(--color-primary-darker);
