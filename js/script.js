@@ -3,7 +3,7 @@
 // Selectors
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
-const aboutSection = document.getElementById("about");
+const homeSection = document.getElementById("home");
 const sermonsSection = document.getElementById("sermons");
 const givingSection = document.getElementById("giving");
 const locationSection = document.getElementById("location");
@@ -64,14 +64,14 @@ window.addEventListener("scroll", function (e) {
   // nav.querySelectorAll(".nav__link").forEach((n) => console.log(n.classList));
 
   if (
-    window.scrollY >= aboutSection.offsetTop &&
+    window.scrollY >= homeSection.offsetTop &&
     window.scrollY < sermonsSection.offsetTop
   ) {
     nav
       .querySelectorAll(".nav__link")
       .forEach((n) => n.classList.remove("nav--active"));
 
-    document.getElementById("nav-about").classList.add("nav--active");
+    document.getElementById("nav-home").classList.add("nav--active");
   } else if (
     window.scrollY >= sermonsSection.offsetTop &&
     window.scrollY < givingSection.offsetTop

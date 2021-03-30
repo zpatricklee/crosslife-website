@@ -55,12 +55,8 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.section#about {
+#home {
   padding-top: 160px;
-}
-
-.section#location {
-  padding-top: 7rem;
 }
 
 .section--hidden {
@@ -131,9 +127,6 @@ header {
   .hamburger-menu--icon {
     display: block;
   }
-  #announcement-banner {
-    border: 1px solid red;
-  }
 }
 
 .nav__link {
@@ -152,8 +145,8 @@ header {
   border-bottom: 3px solid #aa9055;
 }
 
-/* ABOUT */
-.about-pic {
+/* HOME */
+.home-pic {
   max-width: 100%;
   height: auto;
 }
@@ -307,6 +300,13 @@ header {
 }
 
 /* SERMONS */
+.youtube-livestream iframe {
+  width: 100%;
+  min-width: 300px;
+  min-height: 600px;
+  max-width: 1000px;
+}
+
 .sermons__spotify-link {
   text-decoration: none;
   color: #1db954;
@@ -333,7 +333,9 @@ header {
   width: 100%;
   min-width: 300px;
   max-width: 1000px;
-  border: 3px solid grey;
+  border-bottom: 3px solid grey;
+  border-right: 2px solid grey;
+  border-left: 2px solid grey;
   border-radius: 7px;
 }
 
@@ -416,8 +418,9 @@ header {
   max-height: 1000px;
 }
 
-.covid {
+.important-message {
   color: red;
+  background-color: #fff000;
 }
 
 /* CONTACT */
@@ -427,7 +430,7 @@ header {
 }
 
 #contact {
-  padding-top: 400px;
+  padding-top: 200px;
   padding-bottom: 200px;
 }
 
@@ -465,6 +468,7 @@ header {
   font-size: 1.2rem;
   width: 100%;
   max-width: 1000px;
+  cursor: pointer;
 }
 
 #contact .form-btn:hover {
