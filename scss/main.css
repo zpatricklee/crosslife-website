@@ -415,8 +415,8 @@ header {
 }
 
 #contact {
-  padding-top: 300px;
-  padding-bottom: 150px;
+  padding-top: 400px;
+  padding-bottom: 200px;
 }
 
 #contact .input {
@@ -448,7 +448,7 @@ header {
 
 #contact .form-btn {
   font-weight: 400;
-  border: 2px solid grey;
+  border: 2px solid #969696;
   border-radius: 5px;
   font-size: 1.2rem;
   width: 100%;
@@ -457,7 +457,7 @@ header {
 
 #contact .form-btn:hover {
   color: white;
-  background-color: grey;
+  background-color: #969696;
 }
 
 .contact-focus {
