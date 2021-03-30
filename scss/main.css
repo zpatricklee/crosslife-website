@@ -38,7 +38,7 @@ body {
 .section {
   text-align: center;
   width: 100%;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #aa9055;
   padding: 300px 10px;
   -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
   transition: opacity 1.5s, -webkit-transform 1.5s;
@@ -56,7 +56,7 @@ body {
 }
 
 .section#about {
-  padding-top: 200px;
+  padding-top: 160px;
 }
 
 .section#location {
@@ -158,6 +158,16 @@ header {
 }
 
 /* ANNOUNCEMENTS */
+#announcements {
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.announcements-list {
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .carousel {
   display: block;
   position: relative;
@@ -284,13 +294,14 @@ header {
 }
 
 .announcements {
-  margin-left: 1rem;
+  margin-left: 25px;
   text-align: left;
-  font-size: 1.1rem;
   font-weight: lighter;
 }
 
 .announcements-header {
+  font-size: 24px;
+  font-weight: 400;
   text-decoration: underline;
 }
 

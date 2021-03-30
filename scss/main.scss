@@ -49,7 +49,7 @@ body {
 .section {
   text-align: center;
   width: 100%;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid $gold;
   padding: 300px 10px;
   transition: transform 1.5s, opacity 1.5s;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .section#about {
-  padding-top: 200px;
+  padding-top: 160px;
 }
 
 .section#location {
@@ -172,8 +172,15 @@ header {
 }
 
 /* ANNOUNCEMENTS */
-.announcements {
+#announcements {
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.announcements-list {
   // font-size: 1.4rem;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 // CAROUSEL
@@ -302,14 +309,16 @@ header {
 }
 
 .announcements {
-  margin-left: 1rem;
+  margin-left: 25px;
   text-align: left;
-  font-size: 1.1rem;
+  // font-size: 1.1rem;
   font-weight: lighter;
   // border: 1px solid white;
 }
 
 .announcements-header {
+  font-size: 24px;
+  font-weight: 400;
   text-decoration: underline;
 }
 
