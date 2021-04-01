@@ -130,7 +130,7 @@ header {
   display: none;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1024px) {
   .nav__links {
     display: none;
   }
@@ -245,7 +245,7 @@ header {
   }
   /* SECTION */
   .section {
-    padding: 100px 10px;
+    padding: 160px 10px;
   }
   .section-container#contact .section {
     padding-bottom: 20px;
