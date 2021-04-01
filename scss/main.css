@@ -248,7 +248,7 @@ header {
     padding: 160px 10px;
   }
   .section-container#contact .section {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -644,7 +644,7 @@ footer {
 .footer {
   font-size: 1rem;
   background-color: var(--color-primary-darker);
-  padding: 2rem 0;
+  padding: 10px 0;
   color: var(--color-secondary);
   display: -webkit-box;
   display: -ms-flexbox;
