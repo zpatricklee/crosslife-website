@@ -20,10 +20,10 @@
         <a href="./index.html"
           ><img class="crosslife-logo" src="images/crosslife-logo.png" alt="" class="nav__logo"
         /></a>
-        <div id="announcement-banner">
+        <!-- <div id="announcement-banner">
           <p id="announcement-banner-text">RESURRECTION SUNDAY</p>
           <p id="easter-countdown"></p>
-        </div>
+        </div> -->
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link nav--active" id="nav-home" href="./index.html#home">HOME</a>
@@ -44,11 +44,38 @@
             <a class="nav__link" id="nav-announcements" href="./announcements.html">ANNOUNCEMENTS</a>
           </li>
         </ul>
-        <div class="hamburger-menu--icon">
-          <img src="//placehold.it/50x50" alt="" />
+        <div class="menu-btn">
+          <div class="menu-btn__burger"></div>
         </div>
       </nav>
     </header>
+
+    <!-- Hamburger Menu -->
+    <div class="menu__modal">
+      <div class="menu__modal-content">
+        <ul class="menu__links">
+          <li class="menu__item">
+            <a class="menu__link" href="">HOME</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">SERMONS</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">GIVING</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">LOCATION</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">CONTACT</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">ANNOUNCEMENTS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
 
     <section class="section-container" id="home">
       <div class="section">
@@ -70,55 +97,48 @@
       </div>
     </section>
 
-    <!-- <section class="section-container>"
-        <div class="section" id="announcements">
-      <h1 class="section__title">ANNOUNCEMENTS</h1>
-      <br>
-      <h2 class="section__content"></h2>
-          
-          <div class="carousel">
-            <button class="carousel__button carousel__button--left">
-              <img src="images/left-btn.svg" alt="">
-            </button>
-              <div class="carousel__track-container">
-                <ul class="carousel__track">
-                  <li class="carousel__slide current-slide" id="announcements__easter-video" data-slide="0">
-                    <div class="carousel__video-container">
-                      <video id="easter-sunday" preload="" autoplay="true" muted="" playsinline="" loop="true">
-                        <source src="videos/easter-sunday.mp4" type="video/mp4">
-                        <source src="videos/easter-sunday.webm" type="video/webm">
-                      </video>
-                      <div class="carousel__video-text" id="easter-message">
-                        <br>
-                        <h1>COUNTDOWN TO RESURRECTION SUNDAY</h1>
-                        <p id="countdown-timer">
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="carousel__slide" id="announcements__bulletin" data-slide="1">
-                    
-                  </li>
-                  <li class="carousel__slide" id="carousel__calendar" data-slide="2">
-                    <img src="//placehold.it/600x600" alt="">
-                  </li>
-                </ul>
+  <!--          
+    <div class="carousel">
+      <button class="carousel__button carousel__button--left">
+        <img src="images/left-btn.svg" alt="">
+      </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            <li class="carousel__slide current-slide" id="announcements__easter-video" data-slide="0">
+              <div class="carousel__video-container">
+                <video id="easter-sunday" preload="" autoplay="true" muted="" playsinline="" loop="true">
+                  <source src="videos/easter-sunday.mp4" type="video/mp4">
+                  <source src="videos/easter-sunday.webm" type="video/webm">
+                </video>
+                <div class="carousel__video-text" id="easter-message">
+                  <br>
+                  <h1>COUNTDOWN TO RESURRECTION SUNDAY</h1>
+                  <p id="countdown-timer">
+                  </p>
+                </div>
               </div>
-            <button class="carousel__button carousel__button--right">
-              <img src="images/right-btn.svg" alt="">
-            </button>
-          </div>
+            </li>
+            <li class="carousel__slide" id="announcements__bulletin" data-slide="1">
+              
+            </li>
+            <li class="carousel__slide" id="carousel__calendar" data-slide="2">
+              <img src="//placehold.it/600x600" alt="">
+            </li>
+          </ul>
+        </div>
+      <button class="carousel__button carousel__button--right">
+        <img src="images/right-btn.svg" alt="">
+      </button>
+    </div>
 
-          <div class="carousel__nav">
-            <button class="carousel__indicator current-dot" data-dot="0"></button>
-            <button class="carousel__indicator" data-dot="1"></button>
-            <button class="carousel__indicator" data-dot="2"></button>
-          </div>
-          
-          <script src="js/carousel.js"></script>
-        </h2>
-      </div>
-    </section> -->
+    <div class="carousel__nav">
+      <button class="carousel__indicator current-dot" data-dot="0"></button>
+      <button class="carousel__indicator" data-dot="1"></button>
+      <button class="carousel__indicator" data-dot="2"></button>
+    </div>
+    
+    <script src="js/carousel.js"></script>
+  -->
 
     <section class="section-container" id="sermons">
       <div class="section" >
@@ -259,7 +279,7 @@
             ></textarea>
             <br /><br />
             <input class="form-btn" type="submit" value="SEND" />
-            <br /><br /><br /><br />
+            
           </form>
         </div>
       </div>

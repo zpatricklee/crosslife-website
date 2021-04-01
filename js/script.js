@@ -10,6 +10,9 @@ const locationSection = document.getElementById("location");
 const contactSection = document.getElementById("contact");
 const announcementsSection = document.getElementById("announcements");
 const navLinks = document.querySelector(".nav__links");
+const menuBtn = document.querySelector(".menu-btn");
+// const modal = document.querySelector("menu__modal");
+const menuModal = document.querySelector(".menu__modal-content");
 
 const allSections = document.querySelectorAll(".section-container");
 
@@ -107,31 +110,44 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
+let menuOpen = false;
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menuModal.classList.add("open");
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuModal.classList.remove("open");
+    menuOpen = false;
+  }
+});
+
 // nav.addEventListener("mouseover", handleHover.bind(0.3));
 // nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////////////////////////////////////////////////
 // COUNTDOWN FUNCTIONALITY
-let countdownDate = new Date("Apr 4, 2021 11:00:00").getTime();
+// let countdownDate = new Date("Apr 4, 2021 11:00:00").getTime();
 
-const countdown = setInterval(() => {
-  const now = new Date().getTime();
-  const timeLeft = countdownDate - now;
+// const countdown = setInterval(() => {
+//   const now = new Date().getTime();
+//   const timeLeft = countdownDate - now;
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+//   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor(
+//     (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//   );
+//   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  if (timeLeft >= 0) {
-    document.getElementById("easter-countdown").innerHTML = `${days}d : ${(
-      "0" + hours
-    ).slice(-2)}h :  ${("0" + minutes).slice(-2)}m : ${("0" + seconds).slice(
-      -2
-    )}s`;
-  } else {
-    document.getElementById("easter-countdown").innerHTML = "0 : 0 : 0 : 0";
-  }
-}, 1000);
+//   if (timeLeft >= 0) {
+//     document.getElementById("easter-countdown").innerHTML = `${days}d : ${(
+//       "0" + hours
+//     ).slice(-2)}h :  ${("0" + minutes).slice(-2)}m : ${("0" + seconds).slice(
+//       -2
+//     )}s`;
+//   } else {
+//     document.getElementById("easter-countdown").innerHTML = "0 : 0 : 0 : 0";
+//   }
+// }, 1000);
