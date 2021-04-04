@@ -341,6 +341,16 @@ header {
 
 #livestream {
   text-decoration: underline;
+  a {
+    color: red;
+  }
+}
+
+.lyrics-pdf {
+  a {
+    // text-decoration: none;
+    color: red;
+  }
 }
 
 .sermons__spotify-link {
