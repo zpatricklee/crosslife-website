@@ -13,14 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,600;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./scss/main.css" />
+    <!-- <link rel="stylesheet" href="./scss/main.css" /> -->
+    <style>
+      <?php include "./scss/main.css" ?>
+    </style>
     <title>Crosslife</title>
     <script defer src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
       <nav class="nav">
-        <a href="./index.html"
+        <a href="./index.php"
           ><img
             class="crosslife-logo"
             src="images/crosslife-logo.png"
@@ -33,25 +36,25 @@
         </div> -->
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" id="nav-home" href="./index.html#home">HOME</a>
+            <a class="nav__link" id="nav-home" href="./index.php#home">HOME</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-sermons" href="./index.html#sermons"
+            <a class="nav__link" id="nav-sermons" href="./index.php#sermons"
               >SERMONS</a
             >
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-giving" href="./index.html#giving"
+            <a class="nav__link" id="nav-giving" href="./index.php#giving"
               >GIVING</a
             >
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-location" href="./index.html#location"
+            <a class="nav__link" id="nav-location" href="./index.php#location"
               >LOCATION</a
             >
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-contact" href="./index.html#contact"
+            <a class="nav__link" id="nav-contact" href="./index.php#contact"
               >CONTACT</a
             >
           </li>
@@ -59,7 +62,7 @@
             <a
               class="nav__link nav--active"
               id="nav-announcements"
-              href="./announcements.html"
+              href="./announcements.php"
               >ANNOUNCEMENTS</a
             >
           </li>
@@ -75,22 +78,22 @@
       <div class="menu__modal-content">
         <ul class="menu__links">
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#home">HOME</a>
+            <a class="menu__link" href="./index.php#home">HOME</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#sermons">SERMONS</a>
+            <a class="menu__link" href="./index.php#sermons">SERMONS</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#giving">GIVING</a>
+            <a class="menu__link" href="./index.php#giving">GIVING</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#location">LOCATION</a>
+            <a class="menu__link" href="./index.php#location">LOCATION</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#contact">CONTACT</a>
+            <a class="menu__link" href="./index.php#contact">CONTACT</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./announcements.html">ANNOUNCEMENTS</a>
+            <a class="menu__link" href="./announcements.php">ANNOUNCEMENTS</a>
           </li>
         </ul>
       </div>
@@ -100,7 +103,11 @@
       <h1 class="section__title">ANNOUNCEMENTS</h1>
       <br /><br />
       <div class="section__content">
-        <ul class="announcements">
+
+        <div class="announcements">
+          <?php include "./get-announcements.php" ?>
+        </div>
+        <!-- <ul class="announcements">
           <span class="announcements-header">DAILY DEVOTIONS</span>
           <li class="announcements-list">
             Monday-Saturday @ 6:45AM-7:15AM (online)
@@ -179,8 +186,8 @@
             <a class="sermons__anchor-link" href="https://anchor.fm/crosslifecf"
               ><strong>Anchor</strong></a
             >
-          </li>
-        </ul>
+          </li> 
+        </ul> -->
       </div>
     </section>
 

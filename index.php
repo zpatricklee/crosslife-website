@@ -17,7 +17,7 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <a href="./index.html"
+        <a href="./index.php"
           ><img class="crosslife-logo" src="images/crosslife-logo.png" alt="" class="nav__logo"
         /></a>
         <!-- <div id="announcement-banner">
@@ -26,22 +26,22 @@
         </div> -->
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link nav--active" id="nav-home" href="./index.html#home">HOME</a>
+            <a class="nav__link nav--active" id="nav-home" href="./index.php#home">HOME</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-sermons" href="./index.html#sermons">SERMONS</a>
+            <a class="nav__link" id="nav-sermons" href="./index.php#sermons">SERMONS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-giving" href="./index.html#giving">GIVING</a>
+            <a class="nav__link" id="nav-giving" href="./index.php#giving">GIVING</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-location" href="./index.html#location">LOCATION</a>
+            <a class="nav__link" id="nav-location" href="./index.php#location">LOCATION</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-contact" href="./index.html#contact">CONTACT</a>
+            <a class="nav__link" id="nav-contact" href="./index.php#contact">CONTACT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-announcements" href="./announcements.html">ANNOUNCEMENTS</a>
+            <a class="nav__link" id="nav-announcements" href="./announcements.php">ANNOUNCEMENTS</a>
           </li>
         </ul>
         <div class="menu-btn">
@@ -55,22 +55,22 @@
       <div class="menu__modal-content">
         <ul class="menu__links">
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#home">HOME</a>
+            <a class="menu__link" href="./index.php#home">HOME</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#sermons">SERMONS</a>
+            <a class="menu__link" href="./index.php#sermons">SERMONS</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#giving">GIVING</a>
+            <a class="menu__link" href="./index.php#giving">GIVING</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#location">LOCATION</a>
+            <a class="menu__link" href="./index.php#location">LOCATION</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index.html#contact">CONTACT</a>
+            <a class="menu__link" href="./index.php#contact">CONTACT</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./announcements.html">ANNOUNCEMENTS</a>
+            <a class="menu__link" href="./announcements.php">ANNOUNCEMENTS</a>
           </li>
         </ul>
       </div>
