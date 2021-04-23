@@ -5,6 +5,12 @@
     session_destroy();
   // }
   // echo $_SESSION['user'];
+
+  if(isset($_GET['login']) && $_GET['login'] === 'unsuccessful'){
+    $errorMsg = "Email and/or password did not match";
+  } 
+  else $errorMsg = '';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,11 +21,11 @@
     <style>
       <?php include "./scss/main.css" ?>
     </style>
-    <title>Document</title>
+    <title>Crosslife</title>
   </head>
   <body>
     <nav>
-      <a href="./index.php"
+      <a href="./index"
           ><img
             class="crosslife-logo"
             src="images/crosslife-logo.png"
@@ -34,6 +40,14 @@
         <tr><th>Password: </th><td><input type="password" name="password"></td></tr>
         <tr><td></td><td style="text-align: center"><input class="submit" type="submit" value="LOGIN" name="login"></td></tr>        
       </form>
+      <p style="color: red; text-align: center">
+        <?php 
+          if(isset($errorMsg) && !empty($errorMsg)){
+            echo $errorMsg;
+          }
+        ?>
+      </p>
+      
     </table>
   </body>
 </html>

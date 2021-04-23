@@ -37,7 +37,7 @@
   <div class="edit-confirmation">
     <p>
       Announcements successfully updated <br>
-      <a href='./logout.php'>Log out</a> or <a href='./edit.php'>return to previous page</a>
+      <a href='./logout'>Log out</a> or <a href='./edit'>return to previous page</a>
     </p>
   </div>
 </body>

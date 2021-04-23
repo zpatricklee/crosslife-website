@@ -24,10 +24,10 @@
   if(password_verify($_POST['password'], $result['hash_pw'])){
     session_start();
     $_SESSION['user'] = $_POST['email'];
-    header("location: edit.php");
+    header("location: edit");
   }
   else{
-    header("location: admin.php");
+    header("location: admin?login=unsuccessful");
   }
   var_export();
 ?>
