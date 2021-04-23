@@ -4,16 +4,20 @@
   // Get connection to DB
   include "db.php";
 
-  // Set default timezone
-  // date_default_timezone_set('America/Los_Angeles');
+  if($stmt = $conn->prepare("INSERT INTO announcement (user, contents) VALUES (?, ?)"))
+  {
+    $user = $_SESSION['user'];
+    $contents = $_POST['editor1'];
+  
+    // var_dump($stmt);
+  
+    $stmt->bind_param("ss", $user, $contents);
+    // $date_added = date('m/d/Y h:i:s a', time());
+    $stmt->execute();
+    $stmt->close();
+  }
 
-  $stmt = $conn->prepare("INSERT INTO announcement (author, contents) VALUES (?, ?)");
-  $author = $_SESSION['user'];
-  $contents = $_POST['editor1'];
-  // $date_added = date('m/d/Y h:i:s a', time());
-  $stmt->bind_param("ss", $author, $contents);
-  $stmt->execute();
-  $stmt->close();
+  // echo $contents;
 
   // echo date('m/d/Y h:i:s a');
 
