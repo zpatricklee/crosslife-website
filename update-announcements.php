@@ -4,14 +4,15 @@
   // Get connection to DB
   include "db.php";
 
-  if($stmt = $conn->prepare("INSERT INTO announcement (user, contents) VALUES (?, ?)"))
+  if($stmt = $conn->prepare("INSERT INTO updates (user, contents, update_type) VALUES (?, ?, ?)"))
   {
     $user = $_SESSION['user'];
     $contents = $_POST['editor1'];
-  
+    $update_type = "announcement";
+
     // var_dump($stmt);
   
-    $stmt->bind_param("ss", $user, $contents);
+    $stmt->bind_param("sss", $user, $contents, $update_type);
     // $date_added = date('m/d/Y h:i:s a', time());
     $stmt->execute();
     $stmt->close();
@@ -40,7 +41,7 @@
 <body>
   <div class="edit-confirmation">
     <p>
-      Announcements successfully updated <br>
+      Successfully updated <br>
       <a href='./logout'>Log out</a> or <a href='./edit'>return to previous page</a>
     </p>
   </div>

@@ -5,7 +5,7 @@
   $sql = "
   SELECT contents
   FROM updates
-  WHERE update_type = 'announcement'
+  WHERE update_type = 'livestream'
   ORDER BY id DESC
   LIMIT 0,1
   ";

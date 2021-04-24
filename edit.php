@@ -39,14 +39,19 @@
             class="nav__logo"
         />
       </a>
-      <a class="admin-logout" href="logout.php">LOG OUT</a>
+      <a class="admin-logout" href="logout">LOG OUT</a>
     </nav>
-    <form style="text-align: center" action="update-announcements.php" method="POST">
+    <form style="text-align: center" action="update-announcements" method="POST">
       <textarea name="editor1" required></textarea><br>
-      <input style="text-align: center; padding: 5px 10px" type="submit" value="SUBMIT">
+      <input style="text-align: center; padding: 5px 10px" type="submit" value="UPDATE ANNOUNCEMENTS">
       <script>
         CKEDITOR.replace( 'editor1' );
       </script>
+    </form>
+    <br><br>
+    <form class="update-livestream" style="text-align: center" action="update-livestream" method="POST">
+      <input type="text" name="livestream-link" size="40" id="livestream-input" required><br>
+      <input type="submit" value="UPDATE LIVESTREAM LINK" id="livestream-btn">
     </form>
 
     <!-- <?php

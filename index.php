@@ -146,10 +146,10 @@
         <br />
         <br>
         <p class="section__content">
-          <span id="livestream"><a href="https://youtu.be/M1fcMZaXevw">Join us LIVE every Sunday @ 11:00AM!</a></span>
+          <span id="livestream"><a href="https://www.youtube.com/channel/UC9cqKtDJQFvr_0Yq09RLJRw">Join us LIVE every Sunday @ 11:00AM!</a></span>
           <br><br>
           <div class="youtube-livestream">
-            <iframe width="" height="" src="https://www.youtube.com/embed/M1fcMZaXevw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="" height="" src="<?php include "./get-livestream.php" ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="lyrics-pdf">
             <strong>
