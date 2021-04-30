@@ -17,7 +17,7 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <a href="./index"
+        <a href="./"
           ><img class="crosslife-logo" src="images/crosslife-logo.png" alt="" class="nav__logo"
         /></a>
         <!-- <div id="announcement-banner">

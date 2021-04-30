@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav>
-      <a href="./index"
+      <a href="./"
           ><img
             class="crosslife-logo"
             src="images/crosslife-logo.png"

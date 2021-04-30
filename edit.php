@@ -31,7 +31,7 @@
   </head>
   <body>
     <nav class="admin-nav">
-      <a href="./index.php"
+      <a href="./"
           ><img
             class="crosslife-logo"
             src="images/crosslife-logo.png"
