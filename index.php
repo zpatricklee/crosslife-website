@@ -26,19 +26,19 @@
         </div> -->
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link nav--active" id="nav-home" href="./index#home">HOME</a>
+            <a class="nav__link nav--active" id="nav-home" href="./#home">HOME</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-sermons" href="./index#sermons">SERMONS</a>
+            <a class="nav__link" id="nav-sermons" href="./#sermons">SERMONS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-giving" href="./index#giving">GIVING</a>
+            <a class="nav__link" id="nav-giving" href="./#giving">GIVING</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-location" href="./index#location">LOCATION</a>
+            <a class="nav__link" id="nav-location" href="./#location">LOCATION</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" id="nav-contact" href="./index#contact">CONTACT</a>
+            <a class="nav__link" id="nav-contact" href="./#contact">CONTACT</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" id="nav-announcements" href="./announcements">ANNOUNCEMENTS</a>
@@ -55,19 +55,19 @@
       <div class="menu__modal-content">
         <ul class="menu__links">
           <li class="menu__item">
-            <a class="menu__link" href="./index#home">HOME</a>
+            <a class="menu__link" href="./#home">HOME</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index#sermons">SERMONS</a>
+            <a class="menu__link" href="./#sermons">SERMONS</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index#giving">GIVING</a>
+            <a class="menu__link" href="./#giving">GIVING</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index#location">LOCATION</a>
+            <a class="menu__link" href="./#location">LOCATION</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="./index#contact">CONTACT</a>
+            <a class="menu__link" href="./#contact">CONTACT</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="./announcements">ANNOUNCEMENTS</a>
