@@ -50,7 +50,7 @@
     </form>
     <br><br>
     <form class="update-livestream" style="text-align: center" action="update-livestream" method="POST">
-      <input type="text" name="livestream-link" size="40" id="livestream-input" required><br>
+      <input type="text" name="livestream-link" size="40" id="livestream-input" required>
       <input type="submit" value="UPDATE LIVESTREAM LINK" id="livestream-btn">
     </form>
 
