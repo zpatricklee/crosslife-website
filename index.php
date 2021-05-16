@@ -97,49 +97,6 @@
       </div>
     </section>
 
-  <!--          
-    <div class="carousel">
-      <button class="carousel__button carousel__button--left">
-        <img src="images/left-btn.svg" alt="">
-      </button>
-        <div class="carousel__track-container">
-          <ul class="carousel__track">
-            <li class="carousel__slide current-slide" id="announcements__easter-video" data-slide="0">
-              <div class="carousel__video-container">
-                <video id="easter-sunday" preload="" autoplay="true" muted="" playsinline="" loop="true">
-                  <source src="videos/easter-sunday.mp4" type="video/mp4">
-                  <source src="videos/easter-sunday.webm" type="video/webm">
-                </video>
-                <div class="carousel__video-text" id="easter-message">
-                  <br>
-                  <h1>COUNTDOWN TO RESURRECTION SUNDAY</h1>
-                  <p id="countdown-timer">
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="carousel__slide" id="announcements__bulletin" data-slide="1">
-              
-            </li>
-            <li class="carousel__slide" id="carousel__calendar" data-slide="2">
-              <img src="//placehold.it/600x600" alt="">
-            </li>
-          </ul>
-        </div>
-      <button class="carousel__button carousel__button--right">
-        <img src="images/right-btn.svg" alt="">
-      </button>
-    </div>
-
-    <div class="carousel__nav">
-      <button class="carousel__indicator current-dot" data-dot="0"></button>
-      <button class="carousel__indicator" data-dot="1"></button>
-      <button class="carousel__indicator" data-dot="2"></button>
-    </div>
-    
-    <script src="js/carousel.js"></script>
-  -->
-
     <section class="section-container" id="sermons">
       <div class="section" >
         <h1 class="section__title">SERMONS</h1>
@@ -154,7 +111,7 @@
           <div class="lyrics-pdf">
             <strong>
             Click to open/download: <br> 
-            >> <a href="resources/05_02_21_Lyrics.pdf" frameborder="0">04_25_21_Lyrics.pdf</a> <<
+            >> <a href="resources/05_16_21_Lyrics.pdf" frameborder="0">05_16_21_Lyrics.pdf</a> <<
             </strong>
           </div>
   
