@@ -103,7 +103,7 @@
         <br />
         <br>
         <p class="section__content">
-          <span id="livestream"><a href="https://www.youtube.com/channel/UC9cqKtDJQFvr_0Yq09RLJRw">Join us LIVE every Sunday @ 11:00AM!</a></span>
+          <!-- <span id="livestream"><a href="https://www.youtube.com/channel/UC9cqKtDJQFvr_0Yq09RLJRw">Join us LIVE every Sunday @ 11:00AM!</a></span>
           <br><br>
           <div class="youtube-livestream">
             <iframe width="" height="" src="<?php include "./get-livestream.php" ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -113,7 +113,7 @@
             Click to open/download: <br> 
             >> <a href="resources/05_16_21_Lyrics.pdf" frameborder="0">05_16_21_Lyrics.pdf</a> <<
             </strong>
-          </div>
+          </div> -->
   
           <br><br>
           LAST WEEK'S SERMON <br />
