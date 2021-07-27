@@ -111,7 +111,7 @@
           <div class="lyrics-pdf">
             <strong>
             Click to open/download: <br> 
-            >> <a href="resources/05_16_21_Lyrics.pdf" frameborder="0">05_16_21_Lyrics.pdf</a> <<
+            >> <a href="resources/06_20_21_Praise_Lyrics.pdf" frameborder="0">PRAISE LYRICS</a> <<
             </strong>
           </div> -->
   
