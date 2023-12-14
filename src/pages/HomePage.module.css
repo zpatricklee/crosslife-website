@@ -1,4 +1,11 @@
 .main-card-img {
-  min-height: 50dvh;
+  /* min-height: 50dvh; */
   max-height: 60dvh;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main-card-text {
+  margin-top: 30%;
 }

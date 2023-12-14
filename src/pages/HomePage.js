@@ -8,10 +8,11 @@ import classes from "./HomePage.module.css";
 
 const HomePage = () => {
   const mainCardImgClassName = `${classes["main-card-img"]}`;
+  const mainCardTextClassName = `${classes["main-card-text"]}`;
 
   return (
     <>
-      <Card className="bg-dark text-white">
+      <Card className="bg-dark text-white mx-2 mx-sm-3">
         <Card.Img
           src="https://picsum.photos/300/200"
           alt="Card image"
@@ -21,7 +22,7 @@ const HomePage = () => {
           <Card.Title className="text-center">
             <h1>Welcome to Crosslife Christian Fellowship</h1>
           </Card.Title>
-          <Card.Text>
+          <Card.Text className={mainCardTextClassName}>
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a little bit longer.
           </Card.Text>
