@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/crosslife-website/static/css/main.e5b5128b.css",
-    "main.js": "/crosslife-website/static/js/main.39bb995c.js",
-    "index.html": "/crosslife-website/index.html",
-    "main.e5b5128b.css.map": "/crosslife-website/static/css/main.e5b5128b.css.map",
-    "main.39bb995c.js.map": "/crosslife-website/static/js/main.39bb995c.js.map"
+    "main.css": "/static/css/main.e5b5128b.css",
+    "main.js": "/static/js/main.3ae7bb60.js",
+    "index.html": "/index.html",
+    "main.e5b5128b.css.map": "/static/css/main.e5b5128b.css.map",
+    "main.3ae7bb60.js.map": "/static/js/main.3ae7bb60.js.map"
   },
   "entrypoints": [
     "static/css/main.e5b5128b.css",
-    "static/js/main.39bb995c.js"
+    "static/js/main.3ae7bb60.js"
   ]
 }
