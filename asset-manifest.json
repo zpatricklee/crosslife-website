@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crosslife-website/static/css/main.e5b5128b.css",
+    "main.js": "/crosslife-website/static/js/main.39bb995c.js",
+    "index.html": "/crosslife-website/index.html",
+    "main.e5b5128b.css.map": "/crosslife-website/static/css/main.e5b5128b.css.map",
+    "main.39bb995c.js.map": "/crosslife-website/static/js/main.39bb995c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5b5128b.css",
+    "static/js/main.39bb995c.js"
+  ]
+}
