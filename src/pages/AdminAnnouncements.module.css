@@ -1,0 +1,75 @@
+.centerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.listGroup {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  width: 100%;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  min-width: 0;
+  word-break: break-word;
+}
+
+@media (min-width: 600px) {
+  .listItem {
+    flex-direction: row;
+    align-items: center;
+    max-width: 600px;
+  }
+}
+
+.announcementContent {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.announcementActions {
+  display: flex;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.button {
+  min-width: 60px;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #888;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0 2px;
+}
+
+.button:active {
+  background: #e3f2fd;
+}
+
+@media (max-width: 600px) {
+  .listItem {
+    max-width: 98vw;
+    padding: 12px;
+  }
+  .button {
+    font-size: 1.1rem;
+    min-width: 48px;
+    padding: 12px 0;
+  }
+}

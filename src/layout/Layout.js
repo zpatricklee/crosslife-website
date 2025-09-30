@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-// import classes from './Layout.module.css';
+import React from "react";
 import NavBar from "../components/NavBar";
 
-function Layout(props) {
-  return (
-    <div>
-      <NavBar />
-      <main>{props.children}</main>
-    </div>
-  );
-}
+const Layout = ({ children }) => (
+  <>
+    <NavBar />
+    <main style={{ marginTop: 80 }}>{children}</main>
+  </>
+);
 
 export default Layout;
+
