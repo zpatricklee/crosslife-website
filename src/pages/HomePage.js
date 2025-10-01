@@ -65,7 +65,20 @@ const HomePage = () => {
   return (
     <div style={{ scrollBehavior: "smooth" }}>
       {/* Home Section */}
-      <section id="home" style={{ background: '#000', color: '#fff', minHeight: "100vh", position: 'relative', overflow: 'hidden', marginTop: '-80px', paddingTop: '80px' }}>
+      <section id="home" style={{
+        background: '#000',
+        color: '#fff',
+        minHeight: '100svh',
+        height: '100svh',
+        position: 'relative',
+        overflow: 'hidden',
+        marginTop: '-80px',
+        paddingTop: '80px', // Added top padding to prevent navbar overlap
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
         <div style={{
           position: 'absolute',
           top: 0,
@@ -76,38 +89,77 @@ const HomePage = () => {
           opacity: 0.5,
           zIndex: 1
         }}></div>
-        <div className="d-flex flex-column justify-content-center align-items-center" style={{ position: 'relative', zIndex: 2, minHeight: 400, width: '100%', paddingTop: 56 }}>
-          <h1 style={{ color: '#fff', fontWeight: 700, fontSize: '2.5rem', textAlign: 'center', marginTop: 60, textShadow: '0 2px 16px #000' }}>
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
+          width: '100%',
+          maxWidth: 600,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'center',
+          flex: 1,
+          padding: '32px 16px 0 16px',
+        }}>
+          <h1 style={{
+            color: '#fff',
+            fontWeight: 700,
+            fontSize: '2rem',
+            textAlign: 'center',
+            margin: 0,
+            marginBottom: 12,
+            textShadow: '0 2px 16px #000',
+          }}>
             Welcome to Crosslife Christian Fellowship
           </h1>
-          <div className={classes["main-card-text"] + " text-center"} style={{ color: '#fff', marginTop: 16 }}>
+          <div className={classes["main-card-text"] + " text-center"} style={{
+            color: '#fff',
+            marginBottom: 18,
+            fontSize: '1.1rem',
+            fontWeight: 500,
+            textShadow: '0 1px 8px #000',
+          }}>
             Glorify Jesus. Grow Together in Jesus. Go Share About Jesus.
           </div>
-        </div>
-        <div className="text-center mt-4" style={{ color: '#fff', position: 'relative', zIndex: 2 }}>
-          <strong>Sunday Worship: 11:30 AM</strong>
-          <br />
-          <span>1340 W Gardena Blvd, CA 90247</span>
-          <div style={{ width: '100%', maxWidth: 400, margin: '12px auto 0', borderRadius: 8, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
-            <iframe
-              title="Map to Crosslife Christian Fellowship"
-              src="https://www.google.com/maps?q=1340+W+Gardena+Blvd,+Gardena,+CA+90247&output=embed"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="text-center" style={{
+            color: '#fff',
+            position: 'relative',
+            zIndex: 2,
+            width: '100%',
+            marginBottom: 10,
+          }}>
+            <strong>Sunday Worship: 11:30 AM</strong>
+            <br />
+            <span>1340 W Gardena Blvd, CA 90247</span>
+            <div style={{
+              width: '100%',
+              maxWidth: 400,
+              margin: '12px auto 0',
+              borderRadius: 8,
+              overflow: 'hidden',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
+              height: '180px',
+            }}>
+              <iframe
+                title="Map to Crosslife Christian Fellowship"
+                src="https://www.google.com/maps?q=1340+W+Gardena+Blvd,+Gardena,+CA+90247&output=embed"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=1340+W+Gardena+Blvd,+Gardena,+CA+90247"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'block', color: '#bb86fc', textDecoration: 'underline', fontSize: 14, marginTop: 4 }}
+            >
+              View on Google Maps
+            </a>
           </div>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=1340+W+Gardena+Blvd,+Gardena,+CA+90247"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'block', color: '#bb86fc', textDecoration: 'underline', fontSize: 14, marginTop: 4 }}
-          >
-            View on Google Maps
-          </a>
         </div>
       </section>
 
