@@ -18,7 +18,8 @@ export function logout() {
 }
 
 export function isAuthenticated() {
-  return localStorage.getItem(AUTH_KEY) === "true";
+  const auth = getAuth();
+  return !!auth.currentUser;
 }
 
 export async function isAdminUser() {
