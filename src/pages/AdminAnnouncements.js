@@ -125,14 +125,14 @@ const AdminAnnouncements = () => {
   return (
     <>
       <NavBar />
-      <div className={styles.centerContainer + " mt-4"}>
-        <div>
-          <div className="d-flex justify-content-between align-items-center mb-3" style={{ maxWidth: 600 }}>
+      <div style={{ width: '100vw', boxSizing: 'border-box', padding: '0 12px', maxWidth: '100vw', overflowX: 'hidden', margin: '0 auto' }}>
+        <div style={{ width: '100%', maxWidth: '100%', margin: '0 auto' }}>
+          <div className="d-flex justify-content-between align-items-center mb-3" style={{ width: '100%', maxWidth: '100%' }}>
             <h1 style={{ color: '#fff', fontWeight: 700, textAlign: 'center', flex: 1 }}>Announcements Editor</h1>
             <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
           </div>
-          <form onSubmit={editIdx === null ? handleAdd : handleUpdate} className="mb-4" style={{ maxWidth: 600, background: '#fff', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
-            <div className="mb-2" style={{ maxWidth: 500, margin: '0 auto' }}>
+          <form onSubmit={editIdx === null ? handleAdd : handleUpdate} className="mb-4" style={{ width: '100%', maxWidth: '100%', background: '#fff', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
+            <div className="mb-2" style={{ width: '100%' }}>
               <input
                 className="form-control"
                 placeholder="Title"
@@ -142,7 +142,7 @@ const AdminAnnouncements = () => {
                 style={{ fontWeight: 500, fontSize: '1.1rem', background: '#fff', color: '#222', border: '1px solid #888', borderRadius: 8 }}
               />
             </div>
-            <div className="mb-2" style={{ maxWidth: 500, margin: '0 auto' }}>
+            <div className="mb-2" style={{ width: '100%' }}>
               <textarea
                 className="form-control"
                 placeholder="Content"
@@ -178,7 +178,7 @@ const AdminAnnouncements = () => {
           }}>
             <Droppable droppableId="announcements-list">
               {(provided) => (
-                <ul className={styles.listGroup} ref={provided.innerRef} {...provided.droppableProps}>
+                <ul className={styles.listGroup} ref={provided.innerRef} {...provided.droppableProps} style={{ width: '100%', maxWidth: '100%', padding: 0, margin: 0 }}>
                   {announcements.length === 0 && (
                     <li className="list-group-item text-center" style={{ color: '#888' }}>No announcements found.</li>
                   )}
