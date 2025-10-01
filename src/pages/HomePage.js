@@ -160,8 +160,10 @@ const HomePage = () => {
             <div className="col-12 col-md-8 col-lg-6 text-center">
               <h1 className="mb-4" style={{ color: '#bb86fc' }}>Give</h1>
               <p className="lead mb-4">Support the mission and ministry of Crosslife Christian Fellowship. Your generosity makes a difference!</p>
-              {/* Replace this button/link with your tithe.ly info when ready */}
-              <button className="btn btn-success btn-lg" disabled style={{opacity: 0.7, cursor: 'not-allowed', background: '#03dac6', border: 'none', color: '#121212'}}>Give via tithe.ly (coming soon)</button>
+              {/* Tithe.ly Give Button */}
+              <a href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-success btn-lg" style={{background: '#00DB72', fontWeight: 'bold', fontSize: 19, padding: '15px 70px', borderRadius: 4, color: 'white', border: 'none', textShadow: 'none'}}>Give via tithe.ly</button>
+              </a>
               <div className="mt-3" style={{fontSize: '0.95rem', color: '#bbb'}}>
                 Thank you for your faithful giving!
               </div>
@@ -196,7 +198,7 @@ const HomePage = () => {
               )}
               <div className="text-center mt-4">
                 <div className="d-flex justify-content-center gap-4 mt-3" style={{fontSize: '2rem'}}>
-                  <a href="https://instagram.com/crosslifelifechristianfellowship" target="_blank" rel="noopener noreferrer" title="Instagram" style={{color: '#E1306C'}}>
+                  <a href="https://www.instagram.com/crosslifechristianfellowship?igsh=MTc4MmM1YmI2Ng== " target="_blank" rel="noopener noreferrer" title="Instagram" style={{color: '#E1306C'}}>
                     <i className="bi bi-instagram"></i>
                   </a>
                   <a href="https://www.youtube.com/@crosslifefellowship7644" target="_blank" rel="noopener noreferrer" title="YouTube" style={{color: '#FF0000'}}>
