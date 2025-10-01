@@ -250,36 +250,33 @@ const HomePage = () => {
 						padding: "32px 0",
 					}}
 				>
-					<div className="container-fluid px-2">
-						<div className="row justify-content-center mx-0">
-							<div className="col-12 col-md-8 col-lg-6 px-0 mx-auto">
-								<h1
-									className="text-center mb-3"
-									style={{ color: "#03dac6", fontSize: "1.7rem" }}
+					<div style={{ width: '100%', maxWidth: 600, margin: '0 auto', padding: '0 12px' }}>
+						<h1
+							className="text-center mb-3"
+							style={{ color: "#03dac6", fontSize: "1.7rem" }}
+						>
+							Announcements
+						</h1>
+						<ul className="list-group w-100" style={{ width: '100%' }}>
+							{announcements.map((a, idx) => (
+								<li
+									className="list-group-item mb-2 px-3 py-3"
+									key={idx}
+									style={{
+										background: "#1e1e1e",
+										color: "#fff",
+										borderRadius: 8,
+										fontSize: "1rem",
+										boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
+										width: '100%',
+										maxWidth: '100%',
+									}}
 								>
-									Announcements
-								</h1>
-								<ul className="list-group w-100">
-									{announcements.map((a, idx) => (
-										<li
-											className="list-group-item mb-2 px-3 py-3 mx-auto"
-											key={idx}
-											style={{
-												background: "#1e1e1e",
-												color: "#fff",
-												borderRadius: 8,
-												fontSize: "1rem",
-												boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
-												maxWidth: "100%",
-											}}
-										>
-											<strong style={{ fontSize: "1.1rem" }}>{a.title}</strong>
-											<div style={{ marginTop: 4 }}>{a.content}</div>
-										</li>
-									))}
-								</ul>
-							</div>
-						</div>
+									<strong style={{ fontSize: "1.1rem" }}>{a.title}</strong>
+									<div style={{ marginTop: 4 }}>{a.content}</div>
+								</li>
+							))}
+						</ul>
 					</div>
 				</section>
 

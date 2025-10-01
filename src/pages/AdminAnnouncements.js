@@ -125,13 +125,13 @@ const AdminAnnouncements = () => {
   return (
     <>
       <NavBar />
-      <div style={{ width: '100vw', boxSizing: 'border-box', padding: '0 12px', maxWidth: '100vw', overflowX: 'hidden', margin: '0 auto' }}>
-        <div style={{ width: '100%', maxWidth: '100%', margin: '0 auto' }}>
-          <div className="d-flex justify-content-between align-items-center mb-3" style={{ width: '100%', maxWidth: '100%' }}>
+      <div style={{ width: '100%', maxWidth: 600, margin: '0 auto', padding: '0 12px' }}>
+        <div style={{ width: '100%' }}>
+          <div className="d-flex justify-content-between align-items-center mb-3" style={{ width: '100%' }}>
             <h1 style={{ color: '#fff', fontWeight: 700, textAlign: 'center', flex: 1 }}>Announcements Editor</h1>
             <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
           </div>
-          <form onSubmit={editIdx === null ? handleAdd : handleUpdate} className="mb-4" style={{ width: '100%', maxWidth: '100%', background: '#fff', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
+          <form onSubmit={editIdx === null ? handleAdd : handleUpdate} className="mb-4" style={{ width: '100%', background: '#fff', borderRadius: 12, padding: 24, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
             <div className="mb-2" style={{ width: '100%' }}>
               <input
                 className="form-control"
@@ -178,7 +178,7 @@ const AdminAnnouncements = () => {
           }}>
             <Droppable droppableId="announcements-list">
               {(provided) => (
-                <ul className={styles.listGroup} ref={provided.innerRef} {...provided.droppableProps} style={{ width: '100%', maxWidth: '100%', padding: 0, margin: 0 }}>
+                <ul className={styles.listGroup} ref={provided.innerRef} {...provided.droppableProps} style={{ width: '100%', padding: 0, margin: 0 }}>
                   {announcements.length === 0 && (
                     <li className="list-group-item text-center" style={{ color: '#888' }}>No announcements found.</li>
                   )}
@@ -199,7 +199,7 @@ const AdminAnnouncements = () => {
                           {...dragProvided.draggableProps}
                           {...dragProvided.dragHandleProps}
                         >
-                          <div className={styles.announcementContent}>
+                          <div className={styles.announcementContent} style={{ width: '100%' }}>
                             <strong>{a.title}</strong>
                             <div>{a.content}</div>
                           </div>
