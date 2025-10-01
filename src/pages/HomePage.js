@@ -200,42 +200,38 @@ const HomePage = () => {
 						padding: "60px 0",
 					}}
 				>
-					<div className="container-fluid px-2">
-						<div className="row justify-content-center mx-0">
-							<div className="col-12 col-md-10 col-lg-8 px-0 mx-auto">
-								<h1
-									className="text-center mb-4"
-									style={{ color: "#bb86fc" }}
-								>
-									About Us
-								</h1>
-								<div
-									className="card p-4 shadow-sm border-0 mx-auto w-100"
-									style={{
-										background: "#232323",
-										color: "#fff",
-										maxWidth: "100%",
-									}}
-								>
-									<h2 className="mb-3 text-center"></h2>
-									<p className="lead text-center">
-										Crosslife Christian Fellowship is the adult,
-										English-speaking, congregation of Gardena
-										Presbyterian Church (PCA). As a diverse
-										community of believers, Crosslife's purpose is
-										to reflect the differences that become united
-										in Christ, by reaching out with the gospel to
-										the South Bay.
-									</p>
-									<h2 className="mb-3 mt-4 text-center">
-										Our Mission Statement
-									</h2>
-									<p className="text-center">
-										Glorify Jesus. Grow Together in
-										Jesus. Go Share About Jesus.
-									</p>
-								</div>
-							</div>
+					<div className={classes.cardContainer}>
+						<h1
+							className="text-center mb-4"
+							style={{ color: "#bb86fc" }}
+						>
+							About Us
+						</h1>
+						<div
+							className="card p-4 shadow-sm border-0 mx-auto w-100"
+							style={{
+								background: "#232323",
+								color: "#fff",
+								maxWidth: "100%",
+							}}
+						>
+							<h2 className="mb-3 text-center"></h2>
+							<p className="lead text-center">
+								Crosslife Christian Fellowship is the adult,
+								English-speaking, congregation of Gardena
+								Presbyterian Church (PCA). As a diverse
+								community of believers, Crosslife's purpose is
+								to reflect the differences that become united
+								in Christ, by reaching out with the gospel to
+								the South Bay.
+							</p>
+							<h2 className="mb-3 mt-4 text-center">
+								Our Mission Statement
+							</h2>
+							<p className="text-center">
+								Glorify Jesus. Grow Together in
+								Jesus. Go Share About Jesus.
+							</p>
 						</div>
 					</div>
 				</section>
@@ -250,14 +246,14 @@ const HomePage = () => {
 						padding: "32px 0",
 					}}
 				>
-					<div style={{ width: '100%', maxWidth: 600, margin: '0 auto', padding: '0 12px' }}>
+					<div className={classes.cardContainer}>
 						<h1
 							className="text-center mb-3"
 							style={{ color: "#03dac6", fontSize: "1.7rem" }}
 						>
 							Announcements
 						</h1>
-						<ul className="list-group w-100" style={{ width: '100%' }}>
+						<ul className="list-group w-100">
 							{announcements.map((a, idx) => (
 								<li
 									className="list-group-item mb-2 px-3 py-3"
@@ -268,8 +264,8 @@ const HomePage = () => {
 										borderRadius: 8,
 										fontSize: "1rem",
 										boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
-										width: '100%',
-										maxWidth: '100%',
+										width: "100%",
+										maxWidth: "100%",
 									}}
 								>
 									<strong style={{ fontSize: "1.1rem" }}>{a.title}</strong>
@@ -338,187 +334,186 @@ const HomePage = () => {
 				</section>
 
 				{/* Connect + Footer Section (combined 100vh) */}
-				<div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+				<div style={{ height: '100dvh', minHeight: '100svh', display: 'flex', flexDirection: 'column' }}>
 					<section
 						id="connect"
 						style={{
 							background: "#232323",
 							color: "#fff",
 							flex: 1,
-							padding: "60px 0",
+							padding: "60px 0 80px 0", // extra bottom padding for mobile UI
 							boxSizing: "border-box",
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "center",
 						}}
 					>
-						<div className="container-fluid px-2">
-							<div className="row justify-content-center mx-0">
-								<div className="col-12 col-md-8 col-lg-6 px-0 mx-auto">
-									<h1
-										className="text-center mb-4"
-										style={{ color: "#03dac6" }}
+						<div className={classes.formContainer}>
+							<h1 className="text-center mb-4" style={{ color: "#03dac6" }}>Connect</h1>
+							<form
+								ref={formRef}
+								className="mb-4 connect-white-form w-100 mx-auto"
+								onSubmit={handleSubmit}
+							>
+								<div className="mb-3">
+									<label
+										htmlFor="name"
+										className="form-label"
+										style={{ color: "#fff" }}
 									>
-										Connect
-									</h1>
-									<form
-										ref={formRef}
-										className="mb-4 connect-white-form w-100 mx-auto"
-										onSubmit={handleSubmit}
-									>
-										<div className="mb-3">
-											<label
-												htmlFor="name"
-												className="form-label"
-												style={{ color: "#fff" }}
-											>
-												Name
-											</label>
-											<input
-												type="text"
-												className="form-control"
-												id="name"
-												name="from_name"
-												placeholder="Your Name"
-												required
-											/>
-										</div>
-										<div className="mb-3">
-											<label
-												htmlFor="email"
-												className="form-label"
-												style={{ color: "#fff" }}
-											>
-												Email
-											</label>
-											<input
-												type="email"
-												className="form-control"
-												id="email"
-												name="reply_to"
-												placeholder="you@example.com"
-												required
-											/>
-										</div>
-										<div className="mb-3">
-											<label
-												htmlFor="message"
-												className="form-label"
-												style={{ color: "#fff" }}
-											>
-												Message
-											</label>
-											<textarea
-												className="form-control"
-												id="message"
-												name="message"
-												rows="3"
-												placeholder="Let us know how we can help or if you'd like to join our mailing list or if you'd like to get plugged in!"
-												required
-											></textarea>
-										</div>
-										<button
-											type="submit"
-											className="btn btn-primary w-100"
-											disabled={loading}
-											style={{
-												background: "#bb86fc",
-												border: "none",
-												color: "#121212",
-											}}
-										>
-											{loading ? "Sending..." : "Send"}
-										</button>
-									</form>
-									{status && (
-										<div
-											className={`alert ${status.includes("successfully") ? "alert-success" : "alert-danger"}`}
-											style={{ background: '#333', color: '#fff', border: 'none' }}
-										>
-											{status}
-										</div>
-									)}
+										Name
+									</label>
+									<input
+										type="text"
+										className="form-control"
+										id="name"
+										name="from_name"
+										placeholder="Your Name"
+										required
+									/>
 								</div>
-							</div>
+								<div className="mb-3">
+									<label
+										htmlFor="email"
+										className="form-label"
+										style={{ color: "#fff" }}
+									>
+										Email
+									</label>
+									<input
+										type="email"
+										className="form-control"
+										id="email"
+										name="reply_to"
+										placeholder="you@example.com"
+										required
+									/>
+								</div>
+								<div className="mb-3">
+									<label
+										htmlFor="message"
+										className="form-label"
+										style={{ color: "#fff" }}
+									>
+										Message
+									</label>
+									<textarea
+										className="form-control"
+										id="message"
+										name="message"
+										rows="3"
+										placeholder="Let us know how we can help or if you'd like to join our mailing list or if you'd like to get plugged in!"
+										required
+									></textarea>
+								</div>
+								<button
+									type="submit"
+									className="btn btn-primary w-100"
+									disabled={loading}
+									style={{
+										background: "#bb86fc",
+										border: "none",
+										color: "#121212",
+									}}
+								>
+									{loading ? "Sending..." : "Send"}
+								</button>
+							</form>
+							{status && (
+								<div
+									className={`alert ${status.includes("successfully") ? "alert-success" : "alert-danger"}`}
+									style={{ background: '#333', color: '#fff', border: 'none' }}
+								>
+									{status}
+								</div>
+							)}
 						</div>
 					</section>
 					<footer
 						style={{
 							background: "#181818",
 							color: "#fff",
-							padding: "32px 0 16px 0",
-							textAlign: "center",
+							minHeight: "220px",
+							height: "220px",
+							display: "flex",
+							flexDirection: "column",
 							boxSizing: "border-box",
+							textAlign: "center",
+							alignItems: "center",
+							padding: 0,
 						}}
 					>
-						<div style={{ marginBottom: 12 }}>
-							<a
-								href="mailto:crosslifechristianfellowship@gmail.com"
+						<div style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', paddingTop: '16px', boxSizing: 'border-box' }}>
+							<div style={{ marginBottom: 8 }}>
+								<a
+									href="mailto:crosslifechristianfellowship@gmail.com"
+									style={{
+										color: "#bb86fc",
+										textDecoration: "underline",
+										fontWeight: 500,
+										fontSize: "1.1rem",
+									}}
+								>
+									crosslifechristianfellowship@gmail.com
+								</a>
+							</div>
+							<div
 								style={{
-									color: "#bb86fc",
-									textDecoration: "underline",
-									fontWeight: 500,
-									fontSize: "1.1rem",
+									display: "flex",
+									justifyContent: "center",
+									gap: "32px",
+									fontSize: "2rem",
+									marginBottom: 4,
 								}}
 							>
-								crosslifechristianfellowship@gmail.com
-							</a>
+								<a
+									href="https://www.instagram.com/crosslifechristianfellowship?igsh=MTc4MmM1YmI2Ng=="
+									target="_blank"
+									rel="noopener noreferrer"
+									title="Instagram"
+									style={{ color: "#E1306C" }}
+								>
+									<i className="bi bi-instagram"></i>
+								</a>
+								<a
+									href="https://www.youtube.com/@crosslifefellowship7644"
+									target="_blank"
+									rel="noopener noreferrer"
+									title="YouTube"
+									style={{ color: "#FF0000" }}
+								>
+									<i className="bi bi-youtube"></i>
+								</a>
+								<a
+									href="https://facebook.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									title="Facebook"
+									style={{ color: "#1877F3" }}
+								>
+									<i className="bi bi-facebook"></i>
+								</a>
+								<a
+									href="https://open.spotify.com/show/4kThl6swDryOK9aY1jOCov?si=tiQq66QqQcSqjppCuWAq1Q"
+									target="_blank"
+									rel="noopener noreferrer"
+									title="Spotify"
+									style={{ color: "#1DB954" }}
+								>
+									<i className="bi bi-spotify"></i>
+								</a>
+							</div>
+							<div
+								style={{
+									fontSize: "0.95rem",
+									color: "#bbb",
+									marginTop: 4,
+								}}
+							>
+								&copy; {new Date().getFullYear()} Crosslife Christian Fellowship
+							</div>
 						</div>
-						<div
-							style={{
-								display: "flex",
-								justifyContent: "center",
-								gap: "32px",
-								fontSize: "2rem",
-								marginBottom: 8,
-							}}
-						>
-							<a
-								href="https://www.instagram.com/crosslifechristianfellowship?igsh=MTc4MmM1YmI2Ng=="
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Instagram"
-								style={{ color: "#E1306C" }}
-							>
-								<i className="bi bi-instagram"></i>
-							</a>
-							<a
-								href="https://www.youtube.com/@crosslifefellowship7644"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="YouTube"
-								style={{ color: "#FF0000" }}
-							>
-								<i className="bi bi-youtube"></i>
-							</a>
-							<a
-								href="https://facebook.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Facebook"
-								style={{ color: "#1877F3" }}
-							>
-								<i className="bi bi-facebook"></i>
-							</a>
-							<a
-								href="https://open.spotify.com/show/4kThl6swDryOK9aY1jOCov?si=tiQq66QqQcSqjppCuWAq1Q"
-								target="_blank"
-								rel="noopener noreferrer"
-								title="Spotify"
-								style={{ color: "#1DB954" }}
-							>
-								<i className="bi bi-spotify"></i>
-							</a>
-						</div>
-						<div
-							style={{
-								fontSize: "0.95rem",
-								color: "#bbb",
-								marginTop: 8,
-							}}
-						>
-							&copy; {new Date().getFullYear()} Crosslife Christian Fellowship
-						</div>
+						<div style={{ flexGrow: 1 }}></div> {/* Spacer for bottom empty space */}
 					</footer>
 				</div>
 			</div>
