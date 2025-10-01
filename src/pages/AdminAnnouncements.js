@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { fetchAnnouncements, addAnnouncement, updateAnnouncement, deleteAnnouncement, batchUpdateAnnouncementOrders } from "../utils/announcementsFirestore";
-import { getDocs, collection } from "firebase/firestore";
-import { onAuthChange, auth, logout as fbLogout } from "../utils/firebaseAuth";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAnnouncements, deleteAnnouncement, updateAnnouncement } from "../utils/announcementsFirestore";
+import { onAuthChange, logout as fbLogout } from "../utils/firebaseAuth";
 import NavBar from "../components/NavBar";
 import { db } from "../utils/firebase";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -109,27 +108,6 @@ const AdminAnnouncements = () => {
     } catch (err) {
       if (err instanceof FirebaseError && err.code === "permission-denied") {
         setError("You do not have permission to delete announcements.");
-      } else {
-        setError("An error occurred. Please try again.");
-      }
-    }
-  };
-
-  const moveAnnouncement = async (idx, direction) => {
-    const newAnnouncements = [...announcements];
-    const targetIdx = direction === 'up' ? idx - 1 : idx + 1;
-    if (targetIdx < 0 || targetIdx >= newAnnouncements.length) return;
-    // Swap order values
-    const tempOrder = newAnnouncements[idx].order;
-    newAnnouncements[idx].order = newAnnouncements[targetIdx].order;
-    newAnnouncements[targetIdx].order = tempOrder;
-    try {
-      await batchUpdateAnnouncementOrders([newAnnouncements[idx], newAnnouncements[targetIdx]]);
-      setAnnouncements(await fetchAnnouncements());
-      setError("");
-    } catch (err) {
-      if (err instanceof FirebaseError && err.code === "permission-denied") {
-        setError("You do not have permission to reorder announcements.");
       } else {
         setError("An error occurred. Please try again.");
       }
