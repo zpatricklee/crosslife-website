@@ -3,9 +3,11 @@
   <head>
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
-      // Redirect to www.crosslifegpc.com, preserving path/query/hash for React Router
-      var redirectTo = "https://www.crosslifegpc.com" + window.location.pathname + window.location.search + window.location.hash;
-      window.location.replace(redirectTo);
+      // Only redirect if not already on www.crosslifegpc.com
+      if (window.location.hostname !== "www.crosslifegpc.com") {
+        var redirectTo = "https://www.crosslifegpc.com" + window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(redirectTo);
+      }
     </script>
   </head>
   <body>
