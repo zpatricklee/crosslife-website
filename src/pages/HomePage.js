@@ -341,13 +341,13 @@ const HomePage = () => {
 				</section>
 
 				{/* Connect + Footer Section (combined 100vh) */}
-				<div style={{ height: '100dvh', minHeight: '100svh', display: 'flex', flexDirection: 'column' }}>
+				<div style={{ height: '100vh', minHeight: '100svh', display: 'flex', flexDirection: 'column' }}>
 					<section
 						id="connect"
 						style={{
 							background: "#232323",
 							color: "#fff",
-							flex: 1,
+							height: 'calc(75vh - 220px)', // 75vh minus footer content height
 							padding: "60px 0 80px 0", // extra bottom padding for mobile UI
 							boxSizing: "border-box",
 							display: "flex",
@@ -440,8 +440,7 @@ const HomePage = () => {
 						style={{
 							background: "#181818",
 							color: "#fff",
-							minHeight: "220px",
-							height: "220px",
+							height: '220px', // fixed height for visible footer content
 							display: "flex",
 							flexDirection: "column",
 							boxSizing: "border-box",
@@ -522,6 +521,7 @@ const HomePage = () => {
 						</div>
 						<div style={{ flexGrow: 1 }}></div> {/* Spacer for bottom empty space */}
 					</footer>
+					<div style={{ flexGrow: 1, background: '#181818' }}></div> {/* Extra footer space to fill up to 100vh */}
 				</div>
 			</div>
 		</>
