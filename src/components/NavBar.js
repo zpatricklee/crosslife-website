@@ -9,6 +9,7 @@ const SECTION_IDS = ["home", "about", "announcements", "give", "connect"];
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [showOffcanvas, setShowOffcanvas] = useState(false); // Track Offcanvas state
   const navOffcanvasClassName = `${classes["nav-offcanvas"]}`;
   const navOffcanvasBodyClassName = `${classes["nav-offcanvas-body"]}`;
 
@@ -46,6 +47,7 @@ const NavBar = () => {
     e.preventDefault();
     if (window.location.pathname.startsWith('/admin')) {
       window.location.href = `/#${id}`;
+      setShowOffcanvas(false); // Collapse menu
       return;
     }
     const el = document.getElementById(id);
@@ -53,8 +55,8 @@ const NavBar = () => {
       const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // 80px for navbar
       window.scrollTo({ top: y, behavior: 'smooth' });
       setActiveSection(id);
-      // Optionally update the URL hash
       window.history.replaceState(null, '', `/#${id}`);
+      setShowOffcanvas(false); // Collapse menu
     }
   };
 
@@ -62,12 +64,14 @@ const NavBar = () => {
     <Navbar key="lg" expand="lg" bg="dark" variant="dark" className="mb-3 fixed-top" style={{zIndex: 1050, backgroundColor: '#222'}}>
       <Container fluid style={{ backgroundColor: '#222' }}>
         <Navbar.Brand href="/#home" style={{ backgroundColor: '#222' }}>CCF LOGO</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" onClick={() => setShowOffcanvas(true)} />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
           className={navOffcanvasClassName}
           aria-labelledby="offcanvasNavbarLabel-expand-lg"
           placement="end"
+          show={showOffcanvas}
+          onHide={() => setShowOffcanvas(false)}
         >
           <Offcanvas.Header
             closeButton

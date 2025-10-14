@@ -80,10 +80,11 @@ const HomePage = () => {
 						color: "#fff",
 						minHeight: "100svh",
 						height: "100svh",
+						width: "100vw",
 						position: "relative",
 						overflow: "hidden",
 						marginTop: "-80px",
-						paddingTop: "80px", // Added top padding to prevent navbar overlap
+						paddingTop: "80px",
 						display: "flex",
 						flexDirection: "column",
 						justifyContent: "center",
@@ -204,10 +205,11 @@ const HomePage = () => {
 						background: "#1e1e1e",
 						color: "#fff",
 						minHeight: "60vh",
+						width: "100vw",
 						padding: "60px 0",
 					}}
 				>
-					<div className={classes.cardContainer}>
+					<div style={{ maxWidth: 600, margin: "0 auto" }}>
 						<h1
 							className="text-center mb-4"
 							style={{ color: "#bb86fc" }}
@@ -250,10 +252,11 @@ const HomePage = () => {
 						background: "#232323",
 						color: "#fff",
 						minHeight: "60vh",
+						width: "100vw",
 						padding: "32px 0",
 					}}
 				>
-					<div className={classes.cardContainer}>
+					<div style={{ maxWidth: 600, margin: "0 auto" }}>
 						<h1
 							className="text-center mb-3"
 							style={{ color: "#03dac6", fontSize: "1.7rem" }}
@@ -290,50 +293,53 @@ const HomePage = () => {
 						background: "#1e1e1e",
 						color: "#fff",
 						minHeight: "40vh",
+						width: "100vw",
 						padding: "60px 0",
 					}}
 				>
-					<div className="container">
-						<div className="row justify-content-center">
-							<div className="col-12 col-md-8 col-lg-6 text-center">
-								<h1 className="mb-4" style={{ color: "#bb86fc" }}>
-									Give
-								</h1>
-								<p className="lead mb-4">
-									Support the mission and ministry of Crosslife
-									Christian Fellowship. Your generosity makes a
-									difference!
-								</p>
-								{/* Tithe.ly Give Button */}
-								<a
-									href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<button
-										className="btn btn-success btn-lg"
+					<div style={{ maxWidth: 600, margin: "0 auto" }}>
+						<div className="container">
+							<div className="row justify-content-center">
+								<div className="col-12 col-md-8 col-lg-6 text-center">
+									<h1 className="mb-4" style={{ color: "#bb86fc" }}>
+										Give
+									</h1>
+									<p className="lead mb-4">
+										Support the mission and ministry of Crosslife
+										Christian Fellowship. Your generosity makes a
+										difference!
+									</p>
+									{/* Tithe.ly Give Button */}
+									<a
+										href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<button
+											className="btn btn-success btn-lg"
+											style={{
+												background: "#00DB72",
+												fontWeight: "bold",
+												fontSize: 19,
+												padding: "15px 70px",
+												borderRadius: 4,
+												color: "white",
+												border: "none",
+												textShadow: "none",
+											}}
+										>
+											Give via tithe.ly
+										</button>
+									</a>
+									<div
+										className="mt-3"
 										style={{
-											background: "#00DB72",
-											fontWeight: "bold",
-											fontSize: 19,
-											padding: "15px 70px",
-											borderRadius: 4,
-											color: "white",
-											border: "none",
-											textShadow: "none",
+											fontSize: "0.95rem",
+											color: "#bbb",
 										}}
 									>
-										Give via tithe.ly
-									</button>
-								</a>
-								<div
-									className="mt-3"
-									style={{
-										fontSize: "0.95rem",
-										color: "#bbb",
-									}}
-								>
-									Thank you for your faithful giving!
+										Thank you for your faithful giving!
+									</div>
 								</div>
 							</div>
 						</div>
@@ -341,21 +347,22 @@ const HomePage = () => {
 				</section>
 
 				{/* Connect + Footer Section (combined 100vh) */}
-				<div style={{ height: '100vh', minHeight: '100svh', display: 'flex', flexDirection: 'column' }}>
+				<div style={{ height: '100vh', minHeight: '100svh', width: '100vw', display: 'flex', flexDirection: 'column', background: '#232323' }}>
 					<section
 						id="connect"
 						style={{
 							background: "#232323",
 							color: "#fff",
-							height: 'calc(75vh - 220px)', // 75vh minus footer content height
-							padding: "60px 0 80px 0", // extra bottom padding for mobile UI
+							height: 'calc(75vh - 220px)',
+							width: '100vw',
+							padding: "60px 0 80px 0",
 							boxSizing: "border-box",
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "center",
 						}}
 					>
-						<div className={classes.formContainer}>
+						<div style={{ maxWidth: 600, width: '100%', margin: '32px auto 0 auto', background: '#232323', borderRadius: 12, boxShadow: '0 2px 12px rgba(0,0,0,0.12)', padding: '32px 16px' }}>
 							<h1 className="text-center mb-4" style={{ color: "#03dac6" }}>Connect</h1>
 							<form
 								ref={formRef}
@@ -440,7 +447,8 @@ const HomePage = () => {
 						style={{
 							background: "#181818",
 							color: "#fff",
-							height: '220px', // fixed height for visible footer content
+							height: '220px',
+							width: '100vw',
 							display: "flex",
 							flexDirection: "column",
 							boxSizing: "border-box",
@@ -449,7 +457,7 @@ const HomePage = () => {
 							padding: 0,
 						}}
 					>
-						<div style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', paddingTop: '16px', boxSizing: 'border-box' }}>
+						<div style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', paddingTop: '16px', boxSizing: 'border-box', maxWidth: 600, margin: '0 auto' }}>
 							<div style={{ marginBottom: 8 }}>
 								<a
 									href="mailto:crosslifechristianfellowship@gmail.com"
@@ -521,7 +529,7 @@ const HomePage = () => {
 						</div>
 						<div style={{ flexGrow: 1 }}></div> {/* Spacer for bottom empty space */}
 					</footer>
-					<div style={{ flexGrow: 1, background: '#181818' }}></div> {/* Extra footer space to fill up to 100vh */}
+					<div style={{ flexGrow: 1, background: '#181818', width: '100vw' }}></div> {/* Extra footer space to fill up to 100vh */}
 				</div>
 			</div>
 		</>
