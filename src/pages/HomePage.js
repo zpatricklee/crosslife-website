@@ -4,10 +4,10 @@ import emailjs from "emailjs-com";
 import { fetchAnnouncements } from "../utils/announcementsFirestore";
 import classes from "./HomePage.module.css";
 
-// EmailJS config (replace with your actual values)
-const SERVICE_ID = "YOUR_SERVICE_ID";
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const USER_ID = "YOUR_PUBLIC_KEY";
+// EmailJS config (use environment variables for security)
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const DEFAULT_ANNOUNCEMENTS = [
 	{
@@ -47,8 +47,15 @@ const HomePage = () => {
 		e.preventDefault();
 		setLoading(true);
 		setStatus("");
+		console.log('EmailJS config:', SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
+		// Debug: log form data being sent
+		const formData = new FormData(formRef.current);
+		for (let [key, value] of formData.entries()) {
+			console.log(`Form field: ${key} = ${value}`);
+		}
+		// Make sure field names match EmailJS template variables exactly
 		emailjs
-			.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, USER_ID)
+			.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
 			.then(
 				() => {
 					setStatus("Message sent successfully!");
@@ -367,7 +374,7 @@ const HomePage = () => {
 										type="text"
 										className="form-control"
 										id="name"
-										name="from_name"
+										name="name"
 										placeholder="Your Name"
 										required
 									/>
@@ -384,7 +391,7 @@ const HomePage = () => {
 										type="email"
 										className="form-control"
 										id="email"
-										name="reply_to"
+										name="email"
 										placeholder="you@example.com"
 										required
 									/>
