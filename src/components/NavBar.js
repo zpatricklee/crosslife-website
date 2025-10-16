@@ -64,7 +64,7 @@ const NavBar = () => {
     <Navbar key="lg" expand="lg" bg="dark" variant="dark" className="mb-3 fixed-top" style={{zIndex: 1050, backgroundColor: '#222'}}>
       <Container fluid style={{ backgroundColor: '#222' }}>
         <Navbar.Brand href="/#home" style={{ backgroundColor: '#222' }}>CCF LOGO</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" onClick={() => setShowOffcanvas(true)} />
+        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" onClick={() => setShowOffcanvas((prev) => !prev)} />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
           className={navOffcanvasClassName}
