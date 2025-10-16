@@ -294,7 +294,7 @@ const HomePage = () => {
 						color: "#fff",
 						minHeight: "40vh",
 						width: "100vw",
-						padding: "60px 0",
+						padding: "60px 0 120px 0", // Increased bottom padding
 					}}
 				>
 					<div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -336,6 +336,7 @@ const HomePage = () => {
 										style={{
 											fontSize: "0.95rem",
 											color: "#bbb",
+											marginBottom: 24, // Add extra margin for spacing
 										}}
 									>
 										Thank you for your faithful giving!
@@ -353,9 +354,9 @@ const HomePage = () => {
 						style={{
 							background: "#232323",
 							color: "#fff",
-							height: 'calc(75vh - 220px)',
+							height: 'calc(80vh - 220px)',
 							width: '100vw',
-							padding: "60px 0 80px 0",
+							padding: "60px 0 100px 0",
 							boxSizing: "border-box",
 							display: "flex",
 							alignItems: "center",
