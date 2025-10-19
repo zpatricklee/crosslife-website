@@ -286,7 +286,7 @@ const HomePage = () => {
                             Sermons
                         </h1>
                         <p className="text-center" style={{color: "#bbb", marginBottom: 24}}>
-                            Watch our latest sermon below. For more, visit our YouTube channel.
+                            Catch our latest sermon below. For more, visit our YouTube and Spotify channels.
                         </p>
                         {latestSermonId ? (
                             <div style={{
