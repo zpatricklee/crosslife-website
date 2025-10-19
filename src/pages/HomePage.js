@@ -500,7 +500,7 @@ const HomePage = () => {
 										id="message"
 										name="message"
 										rows="3"
-										placeholder="Let us know how we can help or if you'd like to join our mailing list or if you'd like to get plugged in!"
+										placeholder="Let us know how we can help or if you'd like to join our mailing list!"
 										required
 									></textarea>
 								</div>
