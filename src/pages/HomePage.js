@@ -380,54 +380,45 @@ const HomePage = () => {
 						padding: "60px 0 120px 0", // Increased bottom padding
 					}}
 				>
-					<div style={{ maxWidth: 600, margin: "0 auto" }}>
-						<div className="container">
-							<div className="row justify-content-center">
-								<div className="col-12 col-md-8 col-lg-6 text-center">
-									<h1 className="mb-4" style={{ color: "#bb86fc" }}>
-										Give
-									</h1>
-									<p className="lead mb-4">
-										Support the mission and ministry of Crosslife
-										Christian Fellowship. Your generosity makes a
-										difference!
-									</p>
-									{/* Tithe.ly Give Button */}
-									<a
-										href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<button
-											className="btn btn-success btn-lg"
-											style={{
-												background: "#00DB72",
-												fontWeight: "bold",
-												fontSize: 19,
-												padding: "15px 70px",
-												borderRadius: 4,
-												color: "white",
-												border: "none",
-												textShadow: "none",
-											}}
-										>
-											Give via tithe.ly
-										</button>
-									</a>
-									<div
-										className="mt-3"
-										style={{
-											fontSize: "0.95rem",
-											color: "#bbb",
-											marginBottom: 24, // Add extra margin for spacing
-										}}
-									>
-										Thank you for your faithful giving!
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+                        <h1 className="mb-4" style={{ color: "#bb86fc" }}>
+                            Give
+                        </h1>
+                        <p className="lead mb-4">
+                            Support the mission and ministry of Crosslife
+                            Christian Fellowship. Your generosity makes a
+                            difference!
+                        </p>
+                        {/* Tithe.ly Give Button */}
+                        <a
+                            href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button
+                                className="btn btn-success btn-lg"
+                                style={{
+                                    background: "#00DB72",
+                                    fontWeight: "bold",
+                                    fontSize: 19,
+                                    padding: "15px 70px",
+                                    borderRadius: 4,
+                                    color: "white",
+                                    border: "none",
+                                    textShadow: "none",
+                                }}
+                            >
+                                Give via tithe.ly
+                            </button>
+                        </a>
+                        <div
+                            className="mt-3"
+                            style={{
+                                fontSize: "0.95rem",
+                            }}
+                        >
+                        </div>
+                    </div>
 				</section>
 
 				{/* Connect + Footer Section (combined 100vh) */}
