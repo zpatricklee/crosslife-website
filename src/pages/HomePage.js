@@ -69,6 +69,31 @@ const HomePage = () => {
 			);
 	};
 
+    const YOUTUBE_CHANNEL_ID = process.env.REACT_APP_YOUTUBE_CHANNEL_ID;
+    const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+
+    const [latestSermonId, setLatestSermonId] = useState("");
+    const [sermonError, setSermonError] = useState("");
+
+    useEffect(() => {
+        async function fetchLatestSermon() {
+            try {
+                const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${YOUTUBE_CHANNEL_ID}&part=snippet,id&order=date&maxResults=1&type=video`;
+                console.log('YouTube config:', YOUTUBE_CHANNEL_ID, YOUTUBE_API_KEY, apiUrl);
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (data.items && data.items.length > 0) {
+                    setLatestSermonId(data.items[0].id.videoId);
+                } else {
+                    setSermonError("No recent sermon found.");
+                }
+            } catch (err) {
+                setSermonError("Failed to load latest sermon.");
+            }
+        }
+        if (YOUTUBE_API_KEY) fetchLatestSermon();
+    }, []);
+
 	return (
 		<>
 			<div style={{ scrollBehavior: "smooth" }}>
@@ -245,20 +270,78 @@ const HomePage = () => {
 					</div>
 				</section>
 
-				{/* Announcements Section */}
-				<section
-					id="announcements"
-					style={{
-						background: "#232323",
-						color: "#fff",
-						minHeight: "60vh",
-						width: "100vw",
-						padding: "32px 0",
-					}}
-				>
-					<div style={{ maxWidth: 600, margin: "0 auto" }}>
-						<h1
-							className="text-center mb-3"
+                {/* Latest Sermon Section */}
+                <section
+                    id="sermons"
+                    style={{
+                        background: "#181818",
+                        color: "#fff",
+                        minHeight: "50vh",
+                        width: "100vw",
+                        padding: "60px 0",
+                    }}
+                >
+                    <div style={{maxWidth: 600, margin: "0 auto"}}>
+                        <h1 className="text-center mb-4" style={{color: "#bb86fc"}}>
+                            Sermons
+                        </h1>
+                        <p className="text-center" style={{color: "#bbb", marginBottom: 24}}>
+                            Watch our latest sermon below. For more, visit our YouTube channel.
+                        </p>
+                        {latestSermonId ? (
+                            <div style={{
+                                width: "100%",
+                                maxWidth: 480,
+                                margin: "0 auto 18px auto",
+                                borderRadius: 8,
+                                overflow: "hidden",
+                                boxShadow: "0 2px 8px #000"
+                            }}>
+                                <iframe
+                                    title="Latest Crosslife Sermon"
+                                    width="100%"
+                                    height="270"
+                                    src={`https://www.youtube.com/embed/${latestSermonId}`}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        ) : sermonError ? (
+                            <div style={{color: "#bb86fc", marginBottom: 18}}>{sermonError}</div>
+                        ) : (
+                            <div style={{color: "#bbb", marginBottom: 18}}>Loading latest sermon...</div>
+                        )}
+                        <div className="text-center" style={{marginTop: 12}}>
+                            <a href="https://www.youtube.com/@crosslifefellowship7644" target="_blank"
+                               rel="noopener noreferrer" style={{color: "#03dac6", textDecoration: "underline"}}>
+                                More Sermons on YouTube
+                            </a>
+                        </div>
+                        <br></br>
+                        <iframe data-testid="embed-iframe" style={{ borderRadius: "12px" }}
+                                src="https://open.spotify.com/embed/show/6Id4sva6LhINXQFgXQIcNG?utm_source=generator&theme=0&t=0"
+                                width="100%" height="352" frameBorder="0" allowFullScreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+
+                    </div>
+                </section>
+
+                {/* Announcements Section */}
+                <section
+                    id="announcements"
+                    style={{
+                        background: "#232323",
+                        color: "#fff",
+                        minHeight: "60vh",
+                        width: "100vw",
+                        padding: "32px 0",
+                    }}
+                >
+                    <div style={{maxWidth: 600, margin: "0 auto"}}>
+                        <h1
+                            className="text-center mb-3"
 							style={{ color: "#03dac6", fontSize: "1.7rem" }}
 						>
 							Announcements

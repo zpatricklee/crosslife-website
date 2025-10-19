@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import classes from "./NavBar.module.css";
 
-const SECTION_IDS = ["home", "about", "announcements", "give", "connect"];
+const SECTION_IDS = ["home", "about", "sermons", "announcements", "give", "connect"];
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -89,6 +89,8 @@ const NavBar = () => {
                 className={activeSection === "home" ? "active" : ""}>Home</Nav.Link>
               <Nav.Link active={false} onClick={handleNavClick("about")} tabIndex={0} role="button"
                 className={activeSection === "about" ? "active" : ""}>About</Nav.Link>
+              <Nav.Link active={false} onClick={handleNavClick("sermons")} tabIndex={0} role="button"
+                className={activeSection === "sermons" ? "active" : ""}>Sermons</Nav.Link>
               <Nav.Link active={false} onClick={handleNavClick("announcements")} tabIndex={0} role="button"
                 className={activeSection === "announcements" ? "active" : ""}>Announcements</Nav.Link>
               <Nav.Link active={false} onClick={handleNavClick("give")} tabIndex={0} role="button"
