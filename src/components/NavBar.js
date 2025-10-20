@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import classes from "./NavBar.module.css";
 
-const SECTION_IDS = ["home", "about", "sermons", "announcements", "give", "connect"];
+const SECTION_IDS = ["home", "sermons", "announcements", "give", "connect"];
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -63,7 +63,16 @@ const NavBar = () => {
   return (
     <Navbar key="lg" expand="lg" bg="dark" variant="dark" className="mb-3 fixed-top" style={{zIndex: 1050, backgroundColor: '#222'}}>
       <Container fluid style={{ backgroundColor: '#222' }}>
-        <Navbar.Brand href="/#home" style={{ backgroundColor: '#222' }}>CCF LOGO</Navbar.Brand>
+        <Navbar.Brand href="/#home" style={{ display: 'flex', alignItems: 'center', gap: 10, backgroundColor: '#222', padding: '0 8px' }}>
+          <img
+            src="/logo512.png"
+            alt="Crosslife Logo"
+            style={{ height: 40, width: 40, objectFit: 'contain', marginRight: 8 }}
+          />
+          <span style={{ fontWeight: 700, fontSize: 22, letterSpacing: 2, color: '#fff' }}>
+            CROSSLIFE
+          </span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" onClick={() => setShowOffcanvas((prev) => !prev)} />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
@@ -87,8 +96,6 @@ const NavBar = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link active={false} onClick={handleNavClick("home")} tabIndex={0} role="button"
                 className={activeSection === "home" ? "active" : ""}>Home</Nav.Link>
-              <Nav.Link active={false} onClick={handleNavClick("about")} tabIndex={0} role="button"
-                className={activeSection === "about" ? "active" : ""}>About</Nav.Link>
               <Nav.Link active={false} onClick={handleNavClick("sermons")} tabIndex={0} role="button"
                 className={activeSection === "sermons" ? "active" : ""}>Sermons</Nav.Link>
               <Nav.Link active={false} onClick={handleNavClick("announcements")} tabIndex={0} role="button"
