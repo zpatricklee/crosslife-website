@@ -121,7 +121,7 @@ const HomePage = () => {
                             width: "100%",
                             height: "100%",
                             background:
-                                "url(https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80) center/cover no-repeat",
+                                "url(https://crosslifestorage1.blob.core.windows.net/gallery/unnamed.jpeg) center/cover no-repeat",
                             opacity: 0.5,
                             zIndex: 1,
                             pointerEvents: "none",
