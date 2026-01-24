@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteAnnouncement, updateAnnouncement, fetchAnnouncements, addAnnouncement, batchUpdateAnnouncementOrders } from "../utils/announcementsFirestore";
+import { getAnnouncements, deleteAnnouncement, updateAnnouncement, fetchAnnouncements, addAnnouncement, batchUpdateAnnouncementOrders } from "../utils/announcementsFirestore";
 import { onAuthChange, logout as fbLogout } from "../utils/firebaseAuth";
 import NavBar from "../components/NavBar";
 import { db } from "../utils/firebase";

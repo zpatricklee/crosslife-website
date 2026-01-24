@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import emailjs from "emailjs-com";
 import { fetchAnnouncements } from "../utils/announcementsFirestore";
+import classes from "./HomePage.module.css";
 
 // EmailJS config (use environment variables for security)
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -46,6 +47,10 @@ const HomePage = () => {
 		e.preventDefault();
 		setLoading(true);
 		setStatus("");
+		// Debug: log form data being sent
+		const formData = new FormData(formRef.current);
+		for (let [key, value] of formData.entries()) {
+		}
 		// Make sure field names match EmailJS template variables exactly
 		emailjs
 			.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
@@ -83,8 +88,8 @@ const HomePage = () => {
                 setSermonError("Failed to load latest sermon.");
             }
         }
-        if (YOUTUBE_API_KEY && YOUTUBE_CHANNEL_ID) fetchLatestSermon();
-    }, [YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID]);
+        if (YOUTUBE_API_KEY) fetchLatestSermon();
+    }, []);
 
 	return (
 		<>
@@ -225,7 +230,7 @@ const HomePage = () => {
                             </a>
                         </div>
                         <br></br>
-                        <iframe title="Crosslife Spotify" data-testid="embed-iframe" style={{ borderRadius: "12px" }}
+                        <iframe data-testid="embed-iframe" style={{ borderRadius: "12px" }}
                                 src="https://open.spotify.com/embed/show/6Id4sva6LhINXQFgXQIcNG?utm_source=generator&theme=0&t=0"
                                 width="100%" height="352" frameBorder="0" allowFullScreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
