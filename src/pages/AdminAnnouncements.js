@@ -25,7 +25,7 @@ const AdminAnnouncements = () => {
         // Debug: log the email used for admin check
         console.log("Signed in user email:", user.email);
       }
-      if (!user) navigate("/#/admin/login");
+      if (!user) navigate("/admin/login");
     });
     return unsubscribe;
   }, [navigate]);

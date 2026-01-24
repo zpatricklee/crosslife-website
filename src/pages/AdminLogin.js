@@ -78,7 +78,7 @@ const AdminLogin = () => {
           Sign in with Google
         </button>
         <div className="mt-3 text-center" style={{ fontWeight: 700, fontSize: '1.1rem', color: '#fff' }}>
-          Don't have an account? <a href="/#/admin/signup" style={{ color: '#03dac6', textDecoration: 'underline', fontWeight: 700, fontSize: '1.1rem' }}>Sign up</a>
+          Don't have an account? <a href="/admin/signup" style={{ color: '#03dac6', textDecoration: 'underline', fontWeight: 700, fontSize: '1.1rem' }}>Sign up</a>
         </div>
       </div>
     </>

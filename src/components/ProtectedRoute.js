@@ -31,7 +31,7 @@ const ProtectedRoute = ({ children }) => {
       <div style={{ color: 'red', textAlign: 'center', marginTop: '2rem' }}>
         {error}
         <br />
-        <a href="/#/admin/login">Go to Admin Login</a>
+        <a href="/admin/login">Go to Admin Login</a>
       </div>
     );
   }
