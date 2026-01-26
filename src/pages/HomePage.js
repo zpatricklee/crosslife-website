@@ -224,7 +224,7 @@ const HomePage = () => {
                             <div style={{color: "#bbb", marginBottom: 18}}>Loading latest sermon...</div>
                         )}
                         <div className="text-center" style={{marginTop: 12}}>
-                            <a href="https://www.youtube.com/@crosslifefellowship7644" target="_blank"
+                            <a href="https://www.youtube.com/@crosslifeGPC" target="_blank"
                                rel="noopener noreferrer" style={{color: "#03dac6", textDecoration: "underline"}}>
                                 More Sermons on YouTube
                             </a>
@@ -476,7 +476,7 @@ const HomePage = () => {
                                     <i className="bi bi-instagram"></i>
                                 </a>
                                 <a
-                                    href="https://www.youtube.com/@crosslifefellowship7644"
+                                    href="https://www.youtube.com/@crosslifeGPC"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     title="YouTube"
@@ -494,7 +494,7 @@ const HomePage = () => {
                                     <i className="bi bi-facebook"></i>
                                 </a>
                                 <a
-                                    href="https://open.spotify.com/show/4kThl6swDryOK9aY1jOCov?si=tiQq66QqQcSqjppCuWAq1Q"
+                                    href="https://open.spotify.com/show/6Id4sva6LhINXQFgXQIcNG?si=d224bad13b5a4395"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     title="Spotify"
