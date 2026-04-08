@@ -1,47 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>CrosslifeGPC.com</title>
-    <script>
-      if (window.location.hostname === "crosslifegpc.com") {
-        window.location.href = "https://www.crosslifegpc.com" + window.location.pathname + window.location.search + window.location.hash;
-      }
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crosslife Christian Fellowship</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="home-banner" class="home-banner">
+      <div id="logo" class="logo"></div>
+      <div id="navbar" class="navbar">
+        <div class="dropdown">
+          <a href="#" class="dropbtn">ABOUT</a>
+          <div class="dropdown-content">
+            <a href="#about-church">Church About</a>
+            <a href="#about-pastor">Pastor Bio</a>
+          </div>
+        </div>
+        <a href="">SERMONS</a>
+        <a href="#newcomers-section">CONTACT</a>
+        <a
+          href="https://give.tithe.ly/?formId=7960d13b-6864-11ee-90fc-1260ab546d11"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="give">GIVE</span></a
+        >
+      </div>
+    </div>
+    <div id="welcome-section" class="welcome-section">
+      <h1>WELCOME TO CROSSLIFE</h1>
+      <div class="welcome-section-text-container">
+        <p>
+          Crosslife Christian Fellowship is the adult, English-speaking,
+          congregation of Gardena Presbyterian Church (PCA). As a diverse
+          community of believers, Crosslife's purpose is to reflect the
+          differences that become united in Christ, by reaching out with the
+          gospel to the South Bay.
+        </p>
+      </div>
+    </div>
+    <div id="sunday-gatherings" class="sunday-gatherings">
+      <h2>SUNDAY GATHERINGS</h2>
+      <p>11:30am</p>
+    </div>
+    <div id="location" class="location">
+      <h2>LOCATION</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=1340+W+Gardena+Blvd,+Gardena,+CA+90247"
+          target="_blank"
+          >1340 W Gardena Blvd, Gardena, CA 90247</a
+        >
+      </p>
+      <p>Parking available on-site.</p>
+    </div>
+    <div id="newcomers-section" class="newcomers-section">
+      <h2>NEW TO CROSSLIFE?</h2>
+      <p>
+        If you're new to Crosslife and looking for ways to get plugged in, we'd
+        love to hear from you! Fill out our Newcomer's Form and we will get in
+        touch with you and share some ways you can get involved.
+      </p>
+      <div class="newcomers-form-container" id="newcomers-form-container">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfxWr-R2k8G9mmtLOCPxznV2o6tQ4AoMgLV9Khu4de6JWC8CQ/viewform?usp=header"
+          ><span class="newcomers-form-btn">NEWCOMER'S FORM</span></a
+        >
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <p>crosslifechristianfellowship@gmail.com</p>
+      <p>Gardena, CA 90247</p>
+      <div id="footer-socials" class="footer-socials">
+        <a
+          href="https://www.instagram.com/crosslifechristianfellowship?igsh=MTc4MmM1YmI2Ng=="
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@crosslifeGPC"
+          target="_blank"
+          aria-label="YouTube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://open.spotify.com/show/6Id4sva6LhINXQFgXQIcNG?si=d224bad13b5a4395"
+          target="_blank"
+          aria-label="Spotify"
+        >
+          <i class="fab fa-spotify"></i>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
